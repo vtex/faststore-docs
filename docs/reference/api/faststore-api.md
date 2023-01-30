@@ -19,7 +19,7 @@ With the FastStore API, you can:
 Also, thanks to a type-safe **GraphQL** protocol, the FastStore API allows developers to fetch only the strongly typed data needed for building robust and responsive solutions. In practice, developers can source the FastStore API to the [**Next.js**](https://nextjs.org/) or [**Gatsby**](https://www.gatsbyjs.com/) data layers and consume it on frontend components to create stores that use the [**Jamstack**](https://jamstack.org/) architecture.
 
 :::caution
-When building your storefront with FastStore, you must not send requests to APIs other than the FastStore API. If you need to access other data not available in the [native FastStore API schema](https://www.faststore.dev/reference/api/queries), you must do this by [extending the GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api). Otherwise, site performance may be compromised and lead to `504` timeout errors.
+When building your storefront with FastStore, you must not send requests to APIs other than the FastStore API. If you need to access other data not available in the [native FastStore API schema](https://www.faststore.dev/reference/api/queries), you must do this by [extending the GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api). Otherwise, site performance may be compromised and lead to `504` timeout errors. 
 :::
 
 ![FastStore API usage architecture](https://vtexhelp.vtexassets.com/assets/docs/src/faststoreAPI2___58c4a9c4d23539900ef8b1cce9769288.png)
