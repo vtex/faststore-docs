@@ -5,6 +5,10 @@ import TabItem from '@theme/TabItem'
 
 You can build and customize GraphQL queries to display ecommerce data on your storefront, such as products and shopping cart information. In this guide, you will find the basic concepts and steps to implement this in your FastStore project.
 
+:::caution
+When building your storefront with FastStore, you must not send requests to APIs other than the FastStore API. If you need to access other data not available in the [native FastStore API schema](https://www.faststore.dev/reference/api/queries), you must do this by [extending the GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api). Otherwise, site performance may be compromised and lead to `504` timeout errors.
+:::
+
 ## Before you start
 
 Before getting to work on your code, there are some concepts you should be familiar with when it comes to the FastStore API.
