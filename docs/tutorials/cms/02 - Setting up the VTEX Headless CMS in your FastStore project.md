@@ -24,28 +24,32 @@ By the end of this part of this tutorial, you will be able to see your first def
    ```
    mkdir cms
    ```
-3. Inside the `cms` folder, create the three following files:
+3. Inside the `cms` folder, create  a folder with the name of the builder. In this case is `faststore`.
+   ```
+   mkdir faststore
+   ```
+4. Inside the `faststore` folder, create the three following files:
 
 - `content-types.json` - an array of JSON objects that describes the **Content Types** available for customization at the VTEX Headless CMS app.
 - `sections.json` - an array of JSON objects that describes the content structure of the frontend **Section** components available for customization at the VTEX Headless CMS app.
 - `translation-keys.json` - an array of JSON objects that defines the translation keys of the Sections descriptions.
 
 ```
-touch cms/content-types.json cms/sections.json cms/translation-keys.json
+touch cms/faststore/content-types.json cms/faststore/sections.json cms/faststore/translation-keys.json
 ```
 
 4. Update the `sections.json` file with an empty array:
    ```
-   echo "[]" > cms/sections.json
+   echo "[]" > cms/faststore/sections.json
    ```
 5. Update the `translation-keys.json` file with an empty object:
    ```
-   echo "{}" > cms/translation-keys.json
+   echo "{}" > cms/faststore/translation-keys.json
    ```
 6. Now, open the `content-types.json` file in any code editor of your choice and add the following code:
 
 :::info
-  Once you have the 1.0.6 version of @vtex/cli-plugin-cms is possible to specify the builder that you want to synchronize.  To do that you should update with the command ```
+  Once you have the 1.0.7 version of @vtex/cli-plugin-cms it is possible to specify the builder that you want to synchronize.  To do that you should update with the command ```
   vtex plugins update``` and create a folder to each one of the builders to be able to specify it.
  Example: cms/faststore/content-types.json"
 :::
@@ -143,7 +147,7 @@ CMS synced successfully...
 ```
 
 :::caution
-If you have the @vtex/cli-plugin-cms@1.0.6 installed you can use the {builderName} argument to syncronize a specific builder:
+If you have the @vtex/cli-plugin-cms@1.0.7 installed you can use the {builderName} argument to syncronize a specific builder:
    ```sh
   vtex cms:sync {builderName}
    ```
