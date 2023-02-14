@@ -1,11 +1,9 @@
-# How to have Intelligent Search reports
+---
+title: "Configure your store to produce Intelligent Search reports"
+sidebar_label: "Configure your store to produce Intelligent Search reports"
+---
 
-|                                               |
-| --------------------------------------------- | -------------------------------------------------- |
-| **Type**                                      | Procedural                                         |
-| **Audience** [beginner/intermediary/advanced] | Intermediary                                       |
-| **Objective**                                 | How do I make intelligent Search reports work?     |
-| **Keywords**                                  | IS, Intelligent Search, reports, events, analytics |
+# How to configure your store to produce Intelligent Search reports
 
 This guide covers how to have Intelligent Search (IS) reports for your store. You'll be able to do this by sending the appropriate user events to IS.
 
