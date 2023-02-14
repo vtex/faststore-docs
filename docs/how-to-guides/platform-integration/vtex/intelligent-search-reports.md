@@ -17,7 +17,7 @@ Intelligent Search reports might be empty because there is no user data to feed 
 
 Before you begin, you should already have:
 
-- @faststore/api installed with version 1.12.35 or higher.
+- `@faststore/api` installed with version `1.12.35` or higher.
 
 You should also consider that:
 
