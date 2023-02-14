@@ -21,7 +21,7 @@ Before you begin, you should already have:
 
 You should also consider that:
 
-- This guide uses the Next.js starter.
+- This guide is based on the Next.js starter. Still, it is applicable to Gatsby stores as they should require a fairly similar process.
 - Intelligent Search reports only consider full-text searches.
 - Reports might not immediately fill up after all the steps are done.
 
