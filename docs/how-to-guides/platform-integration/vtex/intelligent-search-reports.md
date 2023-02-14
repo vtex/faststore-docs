@@ -35,7 +35,9 @@ You should also consider that:
 
 In the Next JS starters, they are the `ProductGalleryQuery` and `SearchSuggestionsQuery`.
 
-> Not every search query is full-text. You can consider a search query as being full-text if it uses the query variable `term` is not empty. 2. Add the metadata fragment to above one of the queries
+> Not every search query is full-text. You can consider a search query as being full-text if the query variable `term` is not empty. 
+
+2. Add the metadata fragment to above one of the queries
 
 Here's the snippet for the metadata fragment:
 
