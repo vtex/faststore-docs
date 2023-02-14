@@ -23,7 +23,7 @@ You should also consider that:
 
 - This guide is based on the Next.js starter. Still, it is applicable to Gatsby stores as they should require a fairly similar process.
 - Intelligent Search reports only consider full-text searches.
-- Reports might not immediately fill up after all the steps are done.
+- Reports might take up to 8 hours to show on the respective admin page after all steps are completed.
 
 ---
 
@@ -171,7 +171,7 @@ This will update the analytics Search handler to deal with the newly created `in
 
 ## Considerations
 
-It's probable you'll not be able to see the effects of these changes right away. With time, the reports are going appear appropriately.
+The effect of these changes on the Intelligent Search Analytics page can take up to 8 hours. You can check if you have implemented everything correctly by looking for requests to https://sp.vtex.com/event-api/v1 on your browser's Network Tab
 
 ---
 
