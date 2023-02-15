@@ -165,7 +165,7 @@ useQuery<Query, Variables>(query, localizedVariables, {
 
 ### Step 3 - Send the event to Intelligent Search
 
-Update the `src/sdk/analytics/platform/vtex/search.ts` file to look exactly like [this copy](https://github.com/vtex-sites/nextjs.store/blob/955742acaeba8cce078bae558fa0ceb966eaa2d6/src/sdk/analytics/platform/vtex/search.ts!) of that same file.
+Update the `src/sdk/analytics/platform/vtex/search.ts` file to look exactly like [this copy](https://github.com/vtex-sites/nextjs.store/blob/955742acaeba8cce078bae558fa0ceb966eaa2d6/src/sdk/analytics/platform/vtex/search.ts) of that same file.
 
 This will update the analytics Search handler to deal with the newly created `intelligent_search_query` event.
 
