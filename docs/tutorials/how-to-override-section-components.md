@@ -15,25 +15,17 @@ Native sections are provided by default by VTEX's `@faststore/core` package. Sec
 
 ## Before you start
 
-> _Before you begin, you should already have:_
->
-> - A functioning Evergreen store.
+_Before you begin, you should already have:_
+- A functioning Evergreen store.
 
-Include known issues, bugs or other important information in this section.
+_You should also consider that:_
 
-> _You should also consider that:_
->
-> - This feature is experimental.
-> - Some sections contain multiple instances of the same component. When overriting a component or passing additional props to it, consider that all instances will be affected by this.
+- This feature is experimental.
+- Some sections contain multiple instances of the same component. When overriting a component or passing additional props to it, consider that all instances will be affected by this.
 
 ---
 
 ## Step by step
-
-- Use a numbered list.
-- Start each step with a verb.
-- If the overall process has different stages, label them with subheadings.
-
 ### Step 1 - Choose a native section to customize
 
 1. Choose the native section to be customized - [list of available native sections](./tbd-link)
