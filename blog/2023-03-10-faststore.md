@@ -1,6 +1,6 @@
 ---
-title: FastStore - March 2023
-description: 
+title: "Breaking change: image resizing and cropping domain change and performance improvement"
+description: "VTEX is improving FastStore image resizing and cropping performance. To achieve this, `assets.vtex.app` is being deprecated."
 tags: [faststore]
 hide_table_of_contents: false
 ---
@@ -30,4 +30,4 @@ See some examples of how to implement this replacements, considering a store wit
 | Old domain | New domain |
 | ---------- | ---------- |
 | `https://assets.vtex.app` | `https://examplestore.vtexassets.com` | 
-| `https://assets.vtex.app/example/path` | `https://examplestore.vtexassets.com/example/path` | 
+| `https://assets.vtex.app/example/path` | `https://examplestore.vtexassets.com/example/path` |
