@@ -1,5 +1,11 @@
 [
   {
+    "title": "Introducing Media Admin",
+    "product": "CMS",
+    "fileName": "2023-02-28-cms",
+    "description": ": Discover a new way to upload, organize, and manage all your digital assets with the new Media Admin app."
+    },
+  {
     "title": "VTEX Headless CMS previews now available for Base Store (Next.js)",
     "product": "CMS",
     "fileName": "2022-10-05-cms",
