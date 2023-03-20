@@ -7,7 +7,7 @@ sidebar_label: "How to override or customize native section components"
 # How to override or customize native section components
 This guide covers how to override native section components or pass additional props to them.
 
-Native sections are provided by default by VTEX's `@faststore/core` package. Sections are composed by different components that can be customized or overriden to add functionalities or to change looks.
+[Native sections](/tbd-link-to-native-sections-list) are provided by default by VTEX's `@faststore/core` package. Sections are composed by different components that can be customized or overriden to add functionalities or to change looks.
 
 {Image or gif of the expected behavior after completing the guide}
 
@@ -78,7 +78,7 @@ There's a great documentation explaining when you want to override the component
 
 In summary, you want to override the native component when it doesn't offer the functionality you need or when it is layed out much different from what you desire. By doing that, you'll be losing on the performance updates and bug fixes provided by VTEX for that component. For more in-depth information regarding best practices when overriding components, check the link [here](tbd-link).
 
-For most common use cases, there's probably a prop that can be used to customize the behavior of the native component. By passing an additional prop, you get the behavior you originally wanted and don't miss out on updates and bug fixes released by VTEX. You can see the list of available props for each component [here](/tbd-link).
+For most common use cases, there's probably a prop that can be used to customize the behavior of the native component. You can also customize the theme of your store to tailor the look and feel of the native sections to your needs. By passing an additional prop and using our themification tools, you get the behavior you originally wanted and don't miss out on updates and bug fixes released by VTEX. You can see the list of available props for each component [here](https://evergreen.faststore.dev/components).
 
 2. (Optional) Override the component
 
