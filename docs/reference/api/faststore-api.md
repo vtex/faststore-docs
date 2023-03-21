@@ -9,6 +9,8 @@ import GraphQLExplorer from '@site/src/components/GraphQLExplorer/GraphQLExplore
 
 **FastStore API** is an interface between your ecommerce platform and your store's frontend. It uses **[GraphQL](https://graphql.org/)**, a query language for APIs and a runtime for fulfilling queries, in order to expose structured data from everyday ecommerce tasks to frontend components.
 
+The FastStore API allows you to get all information you need for a given page with a single request. You can customize your query to get exactly the data you need and even [extend the GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) to fetch data not natively available. Following these best practices helps to maintain your site's performance at optimal levels.  
+
 With the FastStore API, you can:
 
 - Retrieve product data.
