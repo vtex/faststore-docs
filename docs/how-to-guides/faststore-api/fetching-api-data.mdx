@@ -40,7 +40,14 @@ The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resol
 
 If the root object also lacks the information you need, you must [extend the FastStore GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) instead of adding other requests to your page.
 
-#### 
+#### Avoid custom API Routes
+
+We do not recomend using Next.js [API Routes](https://nextjs.org/docs/api-routes/introduction) other than the ones already built in the [FastStore starters](https://www.faststore.dev/starters).
+
+If you do use this type of function, you must be mindful to always check which ones are actually running and remove the ones that are not.
+
+To see what API Routes are running in your project, you can run the command `yarn build` at the root of your project and check the log. Then, check the directory `src/pages/api` of your project and remove functions that are not running or are not included in the [starter](https://www.faststore.dev/starters) you used.
+
 
 ## Fetching ecommerce data
 
