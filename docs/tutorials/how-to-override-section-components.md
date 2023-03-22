@@ -71,7 +71,7 @@ For more information on when to override or pass additional prop to a component,
 - [Best Practice for overriding components](/tbd-link)
 - [FAQ - When to override or pass additonal prop to a component](/tbd-link)
 
-> ⚠️ Overriding a component leads you to miss out on performance updates and bug fixes provided by VTEX for that component. By passing an additional prop and using our theming tools, you can achieve the desired behavior without missing out on updates and bug fixes from VTEX. You can find the available props for each component [here](https://evergreen.faststore.dev/components).
+> ⚠️ Overriding a component leads you to miss out on performance updates and bug fixes provided by VTEX for that component. By passing an additional prop and using our theming tools, you can achieve the desired behavior without missing out on updates and bug fixes from VTEX. Check out the available props for each component on [Components UI](https://evergreen.faststore.dev/components).
 
 
 #### (Optional) Override the component
