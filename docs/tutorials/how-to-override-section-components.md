@@ -72,7 +72,14 @@ export default overrides
 
 ### Step 3 - Override or pass additional props to a component
 
-1. Choose if you want override the component or pass additional props to it
+Overriding a native component may be necessary if it lacks the functionality you require or has a layout that does not meet your needs. There are cases where a prop is available to customize the behavior of the native component. Additionally, you can customize your store's theme to tailor the look and feel of the native sections to your needs. 
+
+For more information on when to override or pass additional prop to a component, and the best practices for overriding components, check the following documentation:
+
+- [doc 1]()
+- [doc 2]()
+
+> ⚠️ Overriding a component leads you to miss out on performance updates and bug fixes provided by VTEX for that component. By passing an additional prop and using our theming tools, you can achieve the desired behavior without missing out on updates and bug fixes from VTEX. You can find the available props for each component [here](https://evergreen.faststore.dev/components).
 
 There's a great documentation explaining when you want to override the component or just pass additional props to it - here's the [link](tbd-link).
 
