@@ -51,7 +51,7 @@ export default overrides;
 
 You can see a list of overridable components for each native section [here](tbd-link). For this guide, we're choosing to override the `Price` component.
 
-2. Add it to the `overrides` object
+2. Add an object with the name of the component you wish to override to the `components` property inside the `overrides` object.
 
 Add an object with the name of the component you wish to override to the `components` property inside the `overrides` object.
 
