@@ -70,7 +70,7 @@ const overrides: SectionOverride[SECTION] = {
 export default overrides
 ```
 
-### Step 3 - Override the component or pass additional props to a it
+### Step 3 - Override or pass additional props to a component
 
 1. Choose if you want override the component or pass additional props to it
 
