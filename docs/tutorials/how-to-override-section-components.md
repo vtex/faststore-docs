@@ -47,7 +47,7 @@ export default overrides;
 > ⚠️ Change the value of the `SECTION` variable to the name of the section you want to override. In this case, we used the `ProductDetails` example.
 ### Step 2 - Choose a component to override
 
-1. Choose a component to override
+1. Choose a component to override from the [list of overridable components for each native section](tbd-link). In this example, we are overriding the `Price` component.
 
 You can see a list of overridable components for each native section [here](tbd-link). For this guide, we're choosing to override the `Price` component.
 
