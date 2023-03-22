@@ -126,7 +126,7 @@ export default overrides
 
 You can have different outcomes depending if you chose to override the component or pass additional props to it.
 
-> If you override the component, additional props will not be considered when overriding it.
+> ⚠️ If you override the component, additional props will not be considered when overriding it.
 
 If you chose to override the component, you should be able to see your `CustomPrice` component replacing the native `Price` component inside every `ProductDetails` section in your store.
 
