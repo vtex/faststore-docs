@@ -5,7 +5,7 @@ sidebar_label: "How to override or customize native section components"
 
 
 # How to override or customize native section components
-This guide covers how to override native section components or pass additional props to them.
+In this guide, learn two types of customization of a native section component: overriding and passing additional props to them.
 
 [Native sections](/tbd-link-to-native-sections-list) are composed of different components that can be customized or overridden to add functionalities or to change their appearance in the storefront. Sections are provided by default by VTEX's `@faststore/core` package.
 
