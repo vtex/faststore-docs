@@ -5,7 +5,7 @@ sidebar_label: "How to override or customize native section components"
 
 
 # How to override or customize native section components
-In this guide, learn two types of customization of a native section component: overriding and passing additional props to them.
+In this guide, learn about two types of customization of a native section component: overriding and passing additional props to them.
 
 [Native sections](/tbd-link-to-native-sections-list) are composed of different components that can be customized or overridden to add functionalities or to change their appearance in the storefront. Sections are provided by default by VTEX's `@faststore/core` package.
 
@@ -18,7 +18,7 @@ In this guide, learn two types of customization of a native section component: o
 _Before you begin, you should already have:_
 - A functioning Evergreen store.
 
-_You should also consider that:_
+_You should consider that:_
 
 - This feature is experimental.
 - Some sections contain multiple instances of the same component. When overriting a component or passing additional props to it, consider that all instances will be affected by this.
@@ -31,11 +31,7 @@ _You should also consider that:_
 1. Choose the native section to be customized - [list of available native sections](./tbd-link)
 2. Navigate to `src/components/overrides` and create a new file named after the native section. For example, if you chose the `ProductDetails` section for customization, create a new file named `ProductDetails.tsx` under the `src/components/overrides` directory.
 
-eg. Consider you chose the `ProductDetails` section to customize. Create a new file named `ProductDetails.tsx` under the `src/components/overrides` directory.
-
 3. Copy and paste the following boilerplate on the file: 
-
-You should change the value of the `SECTION` variable to the name of the section you chose to override. In this case, `ProductDetails` is used.
 
 ```tsx
 const SECTION = "ProductDetails";
@@ -49,13 +45,9 @@ export default overrides;
 
 1. Choose a component to override from the [list of overridable components for each native section](tbd-link). In this example, we are overriding the `Price` component.
 
-You can see a list of overridable components for each native section [here](tbd-link). For this guide, we're choosing to override the `Price` component.
 
 2. Add an object with the name of the component you wish to override to the `components` property inside the `overrides` object.
 
-Add an object with the name of the component you wish to override to the `components` property inside the `overrides` object.
-
-For this guide, we're choosing to override the `Price` component.
 
 ```tsx
 const SECTION = "ProductDetails"
@@ -76,18 +68,13 @@ Overriding a native component may be necessary if it lacks the functionality you
 
 For more information on when to override or pass additional prop to a component, and the best practices for overriding components, check the following documentation:
 
-- [doc 1]()
-- [doc 2]()
+- [Best Practice for overriding components]()
+- [FAQ - When to override or pass additonal prop to a component]()
 
 > ⚠️ Overriding a component leads you to miss out on performance updates and bug fixes provided by VTEX for that component. By passing an additional prop and using our theming tools, you can achieve the desired behavior without missing out on updates and bug fixes from VTEX. You can find the available props for each component [here](https://evergreen.faststore.dev/components).
 
-There's a great documentation explaining when you want to override the component or just pass additional props to it - here's the [link](tbd-link).
 
-In summary, you want to override the native component when it doesn't offer the functionality you need or when it is layed out much different from what you desire. By doing that, you'll be losing on the performance updates and bug fixes provided by VTEX for that component. For more in-depth information regarding best practices when overriding components, check the link [here](tbd-link).
-
-For most common use cases, there's probably a prop that can be used to customize the behavior of the native component. You can also customize the theme of your store to tailor the look and feel of the native sections to your needs. By passing an additional prop and using our themification tools, you get the behavior you originally wanted and don't miss out on updates and bug fixes released by VTEX. You can see the list of available props for each component [here](https://evergreen.faststore.dev/components).
-
-2. (Optional) Override the component
+#### (Optional) Override the component
 
 Inside the `Price` object, add a property called `Component`. This property value should be defined as a React component created by you, that will be used to replace every instance of the `Price` component inside the `ProductDetails` section.
 
@@ -108,7 +95,7 @@ const overrides: SectionOverride[SECTION] = {
 export default overrides
 ```
 
-3. (Optional) Pass additional props to the component
+#### (Optional) Pass additional props to the component
 
 Inside the `Price` object, add a property called `props`. In addition to the default props this component receives from the section it is contained, every property defined inside the props object will also be passed to it. If a prop you passed has the same name as an already existing prop being received by the component, yours will override the default definition.
 
