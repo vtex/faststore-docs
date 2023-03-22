@@ -44,7 +44,7 @@ const overrides: SectionOverride[SECTION] = { name: SECTION, components: {} };
 
 export default overrides;
 ```
-
+> ⚠️ Change the value of the `SECTION` variable to the name of the section you want to override. In this case, we used the `ProductDetails` example.
 ### Step 2 - Choose a component to override
 
 1. Choose a component to override
