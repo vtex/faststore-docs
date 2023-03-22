@@ -36,7 +36,7 @@ This also means that you must be mindful of the data brought into your query by 
 
 If you need data that is not available on the native [FastStore GraphQL schema](https://www.faststore.dev/reference/api/objects), check the [root object](https://graphql.org/learn/execution/#root-fields-resolvers).
 
-The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) represents the top-level object returned to a query.
+The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) represents the top-level object returned to a query. You can see what data is available in the root object by adding logs or [using a GraphQL IDE](https://www.faststore.dev/how-to-guides/faststore-api/explore-the-faststore-api).
 
 If the root object also lacks the information you need, you must [extend the FastStore GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) instead of adding other requests to your page.
 
