@@ -43,7 +43,7 @@ export default overrides;
 > ⚠️ Change the value of the `SECTION` variable to the name of the section you want to override. In this case, we used the `ProductDetails` example.
 ### Step 2 - Choose a component to override
 
-1. Choose a component to override from the [list of overridable components for each native section](tbd-link). In this example, we are overriding the `Price` component.
+1. Choose a component to override from the [list of overridable components for each native section](/tbd-link). In this example, we are overriding the `Price` component.
 
 
 2. Add an object with the name of the component you wish to override to the `components` property inside the `overrides` object.
@@ -68,8 +68,8 @@ Overriding a native component may be necessary if it lacks the functionality you
 
 For more information on when to override or pass additional prop to a component, and the best practices for overriding components, check the following documentation:
 
-- [Best Practice for overriding components]()
-- [FAQ - When to override or pass additonal prop to a component]()
+- [Best Practice for overriding components](/tbd-link)
+- [FAQ - When to override or pass additonal prop to a component](/tbd-link)
 
 > ⚠️ Overriding a component leads you to miss out on performance updates and bug fixes provided by VTEX for that component. By passing an additional prop and using our theming tools, you can achieve the desired behavior without missing out on updates and bug fixes from VTEX. You can find the available props for each component [here](https://evergreen.faststore.dev/components).
 
