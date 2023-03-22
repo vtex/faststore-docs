@@ -89,7 +89,7 @@ For most common use cases, there's probably a prop that can be used to customize
 
 2. (Optional) Override the component
 
-Inside the `Price` object, add a property called `Component`. This property value should be defined as a React component created by you, that'll be used to replace every instance of the `Price` component inside the `ProductDetails` section.
+Inside the `Price` object, add a property called `Component`. This property value should be defined as a React component created by you, that will be used to replace every instance of the `Price` component inside the `ProductDetails` section.
 
 ```tsx
 import CustomPrice from "src/components/custom/CustomPrice"
