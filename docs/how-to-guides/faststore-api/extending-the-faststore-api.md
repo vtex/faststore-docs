@@ -2,7 +2,7 @@
 
 Although the [FastStore API](/reference/api/faststore-api) provides a complete [GraphQL schema for ecommerce](/reference/api/queries), some stores may need to access other, more specific, information.
 
-For those cases, it is possible to extend the FastStore API schema, adding new data to the existing [queries](/reference/api/queries).
+You should not add requests to other APIs to your storefront since this may [impact site performance](/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data). For those cases, it is possible to extend the FastStore API schema, adding new data to the existing [queries](/reference/api/queries).
 
 In this guide you will learn how to implement this in your project. You can also view a [summary](#summary) of the expected behavior and a [complete code example](#complete-code-example).
 
@@ -14,7 +14,7 @@ Once you have implemented the schema extension in your code, you can run a local
 
 Before extending the schema, check whether the [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) contains the information you need. If it does not, follow the steps below to [extend the schema](#step-by-step).
 
-Note that even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](https://www.faststore.dev/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data).
+Note that even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data).
 
 ## Step by step
 
