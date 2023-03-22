@@ -29,7 +29,7 @@ _You should also consider that:_
 ### Step 1 - Choose a native section to customize
 
 1. Choose the native section to be customized - [list of available native sections](./tbd-link)
-2. Navigate to `src/components/overrides` and create a new file named after the native section
+2. Navigate to `src/components/overrides` and create a new file named after the native section. For example, if you chose the `ProductDetails` section for customization, create a new file named `ProductDetails.tsx` under the `src/components/overrides` directory.
 
 eg. Consider you chose the `ProductDetails` section to customize. Create a new file named `ProductDetails.tsx` under the `src/components/overrides` directory.
 
