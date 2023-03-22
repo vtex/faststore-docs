@@ -22,6 +22,16 @@ We also recommend that you take the time to learn more about data fetching in th
 - [Next.js Data fetching overview](https://nextjs.org/docs/basic-features/data-fetching/overview)
 - [Querying data in pages with Gatsby](https://www.gatsbyjs.com/docs/how-to/querying-data/page-query/)
 
+### Best practices for fetching data
+
+Site performance tends to get worse as more API requests are made by a page. Because of this, the best practices for fetching data on your storefront involve getting precisely the data you need with the minimum number possible of FastStore API requests. The sections below go over what you can do to minimize the API requests of your pages.
+
+#### Fetch only the data you need
+
+GraphQL allows you to customize your query to get precisely the data you need, which reduces the data returned from the requests. Double-check your queries to make sure they are not over-fetching.
+
+This also means that you must be mindful of the data brought into your query by [GraphQL fragments](https://graphql.org/learn/queries/#fragments). Use them only when they do not include unnecessary data.
+
 ## Fetching ecommerce data
 
 There are three main steps to building your page code to fetch data from the FastStore API:
