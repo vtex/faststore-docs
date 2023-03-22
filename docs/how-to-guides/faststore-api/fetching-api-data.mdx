@@ -32,6 +32,16 @@ GraphQL allows you to customize your query to get precisely the data you need, w
 
 This also means that you must be mindful of the data brought into your query by [GraphQL fragments](https://graphql.org/learn/queries/#fragments). Use them only when they do not include unnecessary data.
 
+#### Do not send requests to other APIs
+
+If you need data that is not available on the native [FastStore GraphQL schema](https://www.faststore.dev/reference/api/objects), check the [root object](https://graphql.org/learn/execution/#root-fields-resolvers).
+
+The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) represents the top-level object returned to a query.
+
+If the root object also lacks the information you need, you must [extend the FastStore GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) instead of adding other requests to your page.
+
+#### 
+
 ## Fetching ecommerce data
 
 There are three main steps to building your page code to fetch data from the FastStore API:
