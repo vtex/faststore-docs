@@ -10,6 +10,12 @@ In this guide you will learn how to implement this in your project. You can also
 Once you have implemented the schema extension in your code, you can run a local [test with a GraphQL IDE](/how-to-guides/faststore-api/explore-the-faststore-api).
 :::
 
+## Before starting
+
+Before extending the schema, check whether the [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) contains the information you need. If it does not, follow the steps below to [extend the schema](#step-by-step).
+
+Note that even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](https://www.faststore.dev/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data).
+
 ## Step by step
 
 To extend the GraphQL schema of your FastStore project, there are a few steps you must follow:
