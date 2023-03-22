@@ -33,7 +33,7 @@ _You should also consider that:_
 
 eg. Consider you chose the `ProductDetails` section to customize. Create a new file named `ProductDetails.tsx` under the `src/components/overrides` directory.
 
-3. Copy and paste the following boilerplate on the file
+3. Copy and paste the following boilerplate on the file: 
 
 You should change the value of the `SECTION` variable to the name of the section you chose to override. In this case, `ProductDetails` is used.
 
