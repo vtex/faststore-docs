@@ -1,5 +1,11 @@
 [
   {
+    "title": "New Calendar Views to manage Releases",
+    "product": "CMS",
+    "fileName": "2023-03-23-cms",
+    "description": "Upgrade release planning with improved Calendar Views. Easily manage planned releases through Monthly, Weekly, and Daily Views in Releases module."
+    },
+  {
     "title": "Introducing Media Admin",
     "product": "CMS",
     "fileName": "2023-02-28-cms",
