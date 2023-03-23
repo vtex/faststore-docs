@@ -1,6 +1,6 @@
 # Creating inline resolvers
 
-If you need to [extend the FastStore API schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) for your project or you wish to use an ecommerce platform that is not natively suported, you must create the corresponding inline resolvers.
+If you need to [extend the FastStore API schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) for your project or you wish to use an ecommerce platform that is not natively supported, you must create the corresponding inline resolvers.
 
 This means you are going to write resolvers for the api schema in your project or use an external library.
 
