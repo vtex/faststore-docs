@@ -69,7 +69,7 @@ You can create your resolvers like in the following code example.
 ```ts
 const resolvers = {
   StoreProduct: {
-    customField: async () => {
+    customField: async (root, args, context) => {
       ...
       // Your code goes here
       ...
@@ -80,7 +80,7 @@ const resolvers = {
 
 It is important to note that every resolver has [implicit arguments](https://graphql.org/learn/execution/#root-fields-resolvers) aside from what you define when writing your function. This includes the `root` of the type, which means your resolver has access to all information in that type.
 
-For instance, in the example above the resolver can use whatever information is contained in the existing [StoreProduct](/reference/api/objects#storeproduct) type definition.
+For instance, in the example above the resolver can use whatever information is contained in the existing [StoreProduct](/reference/api/objects#storeproduct) type definition. All queries also return the [root object](https://graphql.org/learn/execution/#root-fields-resolvers), so you can also use any data available in this object.
 
 ### Step 4 - Get FastStore API schema
 
