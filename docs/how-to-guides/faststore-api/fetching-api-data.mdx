@@ -22,6 +22,33 @@ We also recommend that you take the time to learn more about data fetching in th
 - [Next.js Data fetching overview](https://nextjs.org/docs/basic-features/data-fetching/overview)
 - [Querying data in pages with Gatsby](https://www.gatsbyjs.com/docs/how-to/querying-data/page-query/)
 
+### Best practices for fetching data
+
+Site performance tends to get worse as more API requests are made by a page. Because of this, the best practices for fetching data on your storefront involve getting precisely the data you need with the minimum number possible of requests to the FastStore API. The sections below go over what you can do to minimize the API requests of your pages.
+
+#### Fetch only the data you need
+
+GraphQL allows you to customize your query to get precisely the data you need, which reduces the data returned from the requests. Double-check your queries to make sure they are not over-fetching.
+
+This also means that you must be mindful of the data brought into your query by [GraphQL fragments](https://graphql.org/learn/queries/#fragments). Use them only when they do not include unnecessary data.
+
+#### Do not send requests to other APIs
+
+If you need data that is not available on the native [FastStore GraphQL schema](https://www.faststore.dev/reference/api/objects), check the [root object](https://graphql.org/learn/execution/#root-fields-resolvers).
+
+The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) represents the top-level object returned to a query. You can see what data is available in the root object by adding logs or [using a GraphQL IDE](https://www.faststore.dev/how-to-guides/faststore-api/explore-the-faststore-api).
+
+If the root object also lacks the information you need, you must [extend the FastStore GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) instead of adding other requests to your page.
+
+#### Avoid custom API Routes
+
+We do not recomend using Next.js [API Routes](https://nextjs.org/docs/api-routes/introduction) other than the ones already built in the [FastStore starters](https://www.faststore.dev/starters).
+
+If you do use this type of function, you must be mindful to always check which ones are actually running and remove the ones that are not.
+
+To see what API Routes are running in your project, you can run the command `yarn build` at the root of your project and check the log. Then, check the directory `src/pages/api` of your project and remove functions that are not running or are not included in the [starter](https://www.faststore.dev/starters) you used.
+
+
 ## Fetching ecommerce data
 
 There are three main steps to building your page code to fetch data from the FastStore API:
@@ -319,7 +346,7 @@ It is also a good idea to see how data fetching is implemented in pages from [Fa
 
 - [Next.js store product page](https://github.com/vtex-sites/nextjs.store/blob/main/src/pages/%5Bslug%5D/p.tsx)
 - [Gatsby store product page](https://github.com/vtex-sites/gatsby.store/blob/main/src/pages/%5Bslug%5D/p.tsx)
-  :::
+:::
 
 ```javascript
 import { gql } from '@faststore/graphql-utils'

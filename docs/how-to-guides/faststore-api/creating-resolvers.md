@@ -1,17 +1,10 @@
 # Creating inline resolvers
 
-:::caution WIP
-This documentation is currently under development.
-:::
+If you need to [extend the FastStore API schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) for your project or you wish to use an ecommerce platform that is not natively supported, you must create the corresponding inline resolvers.
 
-If your ecommerce platform is not supported you have two options.
+This means you are going to write resolvers for the API schema in your project or use an external library.
 
-1. Make a contribution
-2. Create inline resolvers for your platform
-
-Inline resolves means you are going to write all resolvers for the api schema in your project or in an external library. This is recommended if you are supporting a niche platform and want to have full control over how each field is processed.
-
-To create your own resolvers, you can:
+To create your resolvers, follow the code example below.
 
 ```ts
 import { getTypeDefs } from '@faststore/api'
