@@ -34,7 +34,7 @@ Also, before starting this tutorial, make sure you have:
 
 ## VTEX Headless CMS
 
-VTEX Headless CMS is a **Headless CMS**. That means we store our content in a data layer decoupled from the frontend and use VTEX Headless CMS to deliver this content as structured data to our FastStore project via an API.
+VTEX Headless CMS is a **Headless CMS**, meaning that we store our content in a data layer decoupled from the frontend and use VTEX Headless CMS to deliver this content as structured data to our FastStore project via an API.
 
 As with any other VTEX Admin app, you can install the VTEX Headless CMS in your VTEX account and access it via the Admin. Once installed in your account, you can access the VTEX Headless CMS at **Storefront > Headless (CMS)**.
 
