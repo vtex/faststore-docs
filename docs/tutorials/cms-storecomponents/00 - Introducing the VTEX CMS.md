@@ -18,7 +18,7 @@ Once you finish this tutorial, editors will have the autonomy to create, edit, a
 
 ## Before you start
 
-This tutorial covers how to integrate your **Gatsby + FastStore** project with the [**VTEX Headless CMS**](https://help.vtex.com/). VTEX Headless CMS is available at the Admin of your VTEX account and is our preferred solution for content management.
+This tutorial covers how to integrate your **Gatsby + FastStore** project with the [**VTEX Headless CMS**](https://help.vtex.com/en/tutorial/managing-pages-beta--3DO6rBhZ1p3zndnFu5BgRt?&utm_source=autocomplete). VTEX Headless CMS is available at the Admin of your VTEX account and is our preferred solution for content management.
 
 :::caution
 This tutorial is intended for those who started their FastStore project with the Store Components starter. If you started your project with the Base Store starter, please refer to [this](/tutorials/cms-overview) tutorial.
@@ -36,11 +36,9 @@ Also, before starting this tutorial, make sure you have:
 
 VTEX Headless CMS is a **Headless CMS**. That means we store our content in a data layer decoupled from the frontend and use VTEX Headless CMS to deliver this content as structured data to our FastStore project via an API.
 
-As with any other VTEX Admin app, you can install the VTEX Headless CMS in your VTEX account and access it via the Admin. Once installed in your account, you can access the VTEX Headless CMS at **Store Setup > CMS (alpha) > Pages (alpha)**.
+As with any other VTEX Admin app, you can install the VTEX Headless CMS in your VTEX account and access it via the Admin. Once installed in your account, you can access the VTEX Headless CMS at **Storefront > Headless (CMS)**.
 
 You'll then see a list of all web pages created with the VTEX Headless CMS. Notice that this list will be empty at first, but once editors start creating new pages, your interface should look similar to the following:
-
-![CMS Interface](https://vtexhelp.vtexassets.com/assets/docs/src/cms___37112353021879c47a4724d4a5cf67aa.png)
 
 ### Content Types
 
