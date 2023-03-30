@@ -38,6 +38,13 @@ VTEX Headless CMS is a headless content management system that allows users to s
 
 To access this app, install it in your VTEX account and navigate to **Storefront > Headless CMS** in the Admin. The CMS provides a list of all web pages created with it, which is initially empty but populates as editors create new pages.
 
+Notice that each page created with the VTEX Headless CMS is related to a specific URL and is distinguished by the following properties:
+
+- **Name:** identifies a given page. This name is not available elsewhere and is used only internally in the VTEX Headless CMS for identification purposes.
+- **Type** (a.k.a., Content Type): determines the nature of a page. For example, the **Type** can be a Landing Page, a Product Listing Page (PLP), a Product Detail Page (PDP), etc. You, as a developer, are the one responsible for defining which content types will be available for the editors of your store.
+- **Last modified:** indicates the last time a given page was edited.
+- **Version:** identifies the state of a page, if it's _Draft_, _Publishing_, or _Published_. Notice that editors can have more than one version of the same page with distinct settings and content.
+
 ### Content Types
 
 Each page created with the VTEX Headless CMS is related to a specific URL and is distinguished by the following properties:
