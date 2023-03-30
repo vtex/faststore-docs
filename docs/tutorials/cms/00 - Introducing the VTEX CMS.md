@@ -36,13 +36,9 @@ This tutorial covers how to integrate your **Gatsby + FastStore** project with t
 
 ## VTEX Headless CMS
 
-VTEX Headless CMS is a VTEX App and a no-code management system for storefront content. That means you can store your content as structured data in a layer decoupled from the frontend and then use the VTEX Headless CMS to access and deliver your content to your FastStore project.
+VTEX Headless CMS is a headless content management system that allows users to store content in a decoupled data layer and deliver it as structured data to their FastStore project via an API. 
 
-As with any other VTEX Admin app, you can install the VTEX Headless CMS in your VTEX account and access it via the Admin. Once installed in your account, you can access the VTEX Headless CMS at **Store Setup > CMS (alpha) > Pages (alpha)**.
-
-You'll then see a list of all web pages created with the VTEX Headless CMS. Notice that this list will be empty at first, but once editors start creating new pages, your interface will look similar to the following:
-
-![CMS Interface](https://vtexhelp.vtexassets.com/assets/docs/src/cms___37112353021879c47a4724d4a5cf67aa.png)
+To access this app, install it in your VTEX account and navigate to **Storefront > Headless CMS** in the Admin. The CMS provides a list of all web pages created with it, which is initially empty but populates as editors create new pages.
 
 Notice that each page created with the VTEX Headless CMS is related to a specific URL and is distinguished by the following properties:
 
