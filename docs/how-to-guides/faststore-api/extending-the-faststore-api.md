@@ -12,7 +12,7 @@ Once you have implemented the schema extension in your code, you can run a local
 
 ## Before starting
 
-Before extending the schema, check whether the [GraphQL root object](/how-to-guides-faststore-api/usinf-the-faststore-api-root-object-fields) contains the information you need. If it does not, follow the steps below to [extend the schema](#step-by-step).
+Before extending the schema, check whether the [GraphQL root object](/how-to-guides-faststore-api/using-the-faststore-api-root-object-fields) contains the information you need. If it does not, follow the steps below to [extend the schema](#step-by-step).
 
 Note that even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data).
 
