@@ -1,5 +1,11 @@
 [
   {
+    "title": "New property for creating setting-only content types",
+    "product": "CMS",
+    "fileName": "2023-04-03-cms",
+    "description": "Create settings-only content types with the new onlySettings property, ideal for non-storefront content like SEO pages."
+    },
+  {
     "title": "New Calendar Views to manage Releases",
     "product": "CMS",
     "fileName": "2023-03-23-cms",
