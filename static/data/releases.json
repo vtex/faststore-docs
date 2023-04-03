@@ -1,5 +1,11 @@
 [
   {
+    "title": "New property for creating a single page of a content type",
+    "product": "CMS",
+    "fileName": "2023-04-06-cms",
+    "description": "Headless CMS now has isSingleton property to create single content page, avoid duplicates, and keep layout consistent across requests."
+    },
+  {
     "title": "New Calendar Views to manage Releases",
     "product": "CMS",
     "fileName": "2023-03-23-cms",
