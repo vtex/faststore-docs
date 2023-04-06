@@ -54,7 +54,7 @@ By the end of this part of this tutorial, you will be able to see your first def
 
 7. Now, open the `content-types.json` file in any code editor of your choice and add the following code:
 
-    ```json title="cms/content-types.json"
+    ```json title="cms/faststore/content-types.json"
     [
       {
         "id": "home",
