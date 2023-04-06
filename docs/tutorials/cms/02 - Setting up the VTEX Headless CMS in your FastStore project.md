@@ -39,7 +39,7 @@ By the end of this part of this tutorial, you will be able to see your first def
     - `translation-keys.json` - an array of JSON objects that defines the translation keys of the Sections descriptions.
 
     ```bash
-    touch cms/content-types.json cms/sections.json cms/translation-keys.json
+    touch cms/faststore/content-types.json cms/faststore/sections.json cms/faststore/translation-keys.json
     ```
 
 5. Update the `sections.json` file with an empty array:
