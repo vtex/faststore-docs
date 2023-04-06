@@ -1,4 +1,4 @@
-# Using `isSingleton` property in a content type
+# Using isSingleton property in a content type
 The `isSingleton` property helps maintain consistency in a content type by ensuring that only one page of a particular content type exists in the Headless CMS. For example, implementing this property in a Home Page content type would prevent the creation of multiple pages of this content type and ensure that any updates to the Home Page layout are reflected on one page.
 
 ![singleton-en](https://user-images.githubusercontent.com/67270558/230461926-6944c58e-60f2-4857-82d3-43ee507cac4e.gif)
