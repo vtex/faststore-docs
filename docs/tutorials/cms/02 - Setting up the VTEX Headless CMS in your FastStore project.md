@@ -45,7 +45,7 @@ By the end of this part of this tutorial, you will be able to see your first def
 5. Update the `sections.json` file with an empty array:
 
    ```bash
-   echo "[]" > cms/sections.json
+   echo "[]" > cms/faststore/sections.json
    ```
 6. Update the `translation-keys.json` file with an empty object:
    ```
