@@ -1,5 +1,11 @@
 [
   {
+    "title": "New property for creating a single page of a content type",
+    "product": "CMS",
+    "fileName": "2023-04-06-cms",
+    "description": "Create a single page for a content type with the new `isSingleton` property, ensuring consistency and preventing duplication of layout updates."
+    },
+  {
     "title": "New property for creating setting-only content types",
     "product": "CMS",
     "fileName": "2023-04-03-cms",
@@ -40,11 +46,5 @@
     "product": "WebOps",
     "fileName": "2022-09-08-webops",
     "description": "The automatic previews of your FastStore project's pull requests are now deployed with GitHub environments."
-  },
-  {
-    "title": "New and improved FastStore API guides",
-    "product": "FastStore",
-    "fileName": "2022-09-01-faststore",
-    "description": "There are new and improved FastStore API guides available on our documentation portal."
   }
 ]
