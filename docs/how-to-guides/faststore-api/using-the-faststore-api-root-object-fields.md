@@ -5,5 +5,5 @@ At the root level of every [FastStore API](https://www.faststore.dev/reference/a
 This guide presents the step by step of how to access this information. 
 
 :::info
-Check the reference documentation to learn what are the available [root object fields]().
+Check the reference documentation to learn what are the available [root object fields](/reference/api/root-object-fields).
 :::
