@@ -181,6 +181,8 @@ If your store uses other environments on the portal that do not have the `/api/i
 ## Creating Session Cookie in FastStore Store for Localhost or Internal URLs
 The service app generates the session cookie on the main domain. Still, if the store is using localhost or an internal URL at the checkout, it is necessary to create the cookie manually in the faststore store. To do so, navigate to the checkout URL and copy the cookie value. For example:
 
+![session-cookie-example](https://user-images.githubusercontent.com/67270558/232832503-e1426219-caa2-487d-a220-1c26a8226bbf.png)
+
 Go back to the Fast Store store and use the following command to generate the cookie that will be used to sync the `orderForm`:
 
 ```JavaScript
