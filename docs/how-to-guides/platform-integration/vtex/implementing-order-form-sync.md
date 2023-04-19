@@ -7,7 +7,7 @@ The Order Form Sync feature maintains the user's session and order information a
 
 Pages like My Account, Login, and Checkout are in the Legacy Portal (vtexcommercestable) by default. Since FastStore is the main domain and pages in the legacy portal are subdomains, the user's session cookies for these domains must be synchronized to maintain a seamless shopping experience without losing progress or data.
 
-This synchronization is achieved by duplicating the session cookie for the main domain (faststore) whenever the user navigates to the portal (secure.{dominio}), and a service is called to update the Order Form information associated with that session. This ensures that the user's order data is synchronized across different pages.
+This synchronization is achieved by duplicating the session cookie for the main domain (faststore) whenever the user navigates to the portal (secure.<domain>), and a service is called to update the Order Form information associated with that session. This ensures that the user's order data is synchronized across different pages.
 
 :::caution 
 
