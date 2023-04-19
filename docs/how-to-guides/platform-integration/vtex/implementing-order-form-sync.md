@@ -81,7 +81,7 @@ It is important to perform a retry as the session cookie may not be immediately 
 
 ### Step 2: Update FastStore Theme Code
 
-To send the `orderFormId` parameter, you must perform changes in the FastStore theme code. In your FastStore theme code, navigate to following files:
+To send the `orderFormId` parameter, you must perform changes in the FastStore starter code. Navigate to following files:
 
 #### `src/components/ui/Button/ButtonSignIn/ButtonSignIn.tsx`
 
