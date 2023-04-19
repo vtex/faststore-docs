@@ -124,7 +124,7 @@ Responsible for rendering the Login page. Add the following to allow subsequent 
 ```tsx
         function Page() {
         useEffect(() => {
-        +    window.location.href = +`${storeConfig.loginUrl}${window.location.search}`
+            window.location.href = +`${storeConfig.loginUrl}${window.location.search}`
         }, [])
 
         return (
