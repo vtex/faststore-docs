@@ -109,7 +109,7 @@ Responsible for rendering the `Sign In` button on the Checkout page and provides
 
 ```
 #### `src/pages/account.tsx` 
-Responsible for rendering the My Account page. Add the following to allow subsequent pages to reference the the user’s session cookie of this page:
+Responsible for rendering the My Account page. Add the following to allow subsequent pages to reference the user’s session cookie on this page:
 ```JavaScript
 
 function Page() {
