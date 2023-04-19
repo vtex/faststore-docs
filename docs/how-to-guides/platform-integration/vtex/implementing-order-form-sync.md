@@ -91,7 +91,7 @@ Responsible for rendering the `Sign In` button on the Checkout page and provides
         import styles from 'src/components/ui/Button/button.module.scss'
         import Icon from 'src/components/ui/Icon'
         import { useSession } from 'src/sdk/session'
-       + import { useCart } from '../../../../sdk/cart/index'
+        import { useCart } from '../../../../sdk/cart/index'
 
         const ButtonSignIn = () => {
         const { id } = useCart()
@@ -100,12 +100,13 @@ Responsible for rendering the `Sign In` button on the Checkout page and provides
         return (
             <LinkButton
             data-fs-button-signin-link
-            +  href={
-            +    person?.id ? `/account?orderFormId=${id}` : +`/login?orderFormId=${id}`
-            +  }
+            href={
+                person?.id ? `/account?orderFormId=${id}` : `/login?orderFormId=${id}`
+            }
             className={`${styles.fsButton} text__title-mini`}
             variant="tertiary"
             icon={<Icon name="User" width={18} height={18} weight="bold" />}
+
     ```
 #### `src/pages/account.tsx` 
 Responsible for rendering the My Account page. Add the following to allow subsequent pages to reference the user’s session cookie on this page:
@@ -180,7 +181,7 @@ The service app generates the session cookie on the main domain. However, if the
 Go back to the FastStore store, open your browser's Developer Console and run the following command to generate the cookie that will be used to sync the `orderForm`:
 
     ```js
-        document.cookie = "vtex_session={{value of session cookie}}"
+        document.cookie = "vtex_session={{value of session cookie}}";
     ```
 After that, you should see the cookie created and the `orderForm` synced.
 
