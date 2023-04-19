@@ -75,7 +75,7 @@ callUrlWithRetry(`/api/io/faststore/cookie`, 3, 500)
 
 :::caution 
 
-It is important to perform a retry as, the session cookie may not be immediately available in the request even after the script has run.
+It is important to perform a retry as the session cookie may not be immediately available in the request even after the script has run.
 
 :::
 
