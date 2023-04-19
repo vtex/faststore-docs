@@ -91,7 +91,7 @@ Responsible for rendering the `Sign In` button on the Checkout page and provides
         import styles from 'src/components/ui/Button/button.module.scss'
         import Icon from 'src/components/ui/Icon'
         import { useSession } from 'src/sdk/session'
-    + import { useCart } from '../../../../sdk/cart/index'
+       + import { useCart } from '../../../../sdk/cart/index'
 
         const ButtonSignIn = () => {
         const { id } = useCart()
@@ -180,7 +180,7 @@ The service app generates the session cookie on the main domain. However, if the
 Go back to the FastStore store, open your browser's Developer Console and run the following command to generate the cookie that will be used to sync the `orderForm`:
 
     ```js
-        document.cookie = "vtex_session={{value of session cookie}}";
+        document.cookie = "vtex_session={{value of session cookie}}"
     ```
 After that, you should see the cookie created and the `orderForm` synced.
 
