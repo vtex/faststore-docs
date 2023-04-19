@@ -122,7 +122,7 @@ function Page() {
 ```
 
 #### `src/pages/login.tsx` 
-Responsible for rendering the Login page. Add the following to allow subsequent pages to reference the the user’s session cookie of this page:
+Responsible for rendering the Login page. Add the following to allow subsequent pages to reference the user’s session cookie on this page:
 
 ```JavaScript
 
