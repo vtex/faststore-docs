@@ -112,7 +112,7 @@ Responsible for rendering the My Account page. Add the following to allow subseq
 ```tsx
         function Page() {
             useEffect(() => {
-            +  window.location.href = `${storeConfig.accountUrl}${window.location.search}`
+              window.location.href = `${storeConfig.accountUrl}${window.location.search}`
             }, [])
 
             return (
