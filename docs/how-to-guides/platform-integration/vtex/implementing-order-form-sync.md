@@ -80,14 +80,13 @@ It is important to perform a retry as the session cookie may not be immediately 
 :::
 
 ### Step 2: Update the FastStore Starter
-
 To send the `orderFormId` parameter, you must perform changes in the FastStore starter code. Navigate to following files:
 
 #### `src/components/ui/Button/ButtonSignIn/ButtonSignIn.tsx`
 
 Responsible for rendering the `Sign In` button on the Checkout page and provides the current cart information. Add the `orderFormId` parameter to allow subsequent pages to reference the order information associated with the cart for tracking and processing purposes:
- 
-    ```tsx
+
+```tsx
         import styles from 'src/components/ui/Button/button.module.scss'
         import Icon from 'src/components/ui/Icon'
         import { useSession } from 'src/sdk/session'
@@ -106,35 +105,34 @@ Responsible for rendering the `Sign In` button on the Checkout page and provides
             className={`${styles.fsButton} text__title-mini`}
             variant="tertiary"
             icon={<Icon name="User" width={18} height={18} weight="bold" />}
-
-    ```
+```
 #### `src/pages/account.tsx` 
 Responsible for rendering the My Account page. Add the following to allow subsequent pages to reference the user’s session cookie on this page:
 
-    ```tsx
+```tsx
         function Page() {
-        useEffect(() => {
-        +  window.location.href = `${storeConfig.accountUrl}${window.location.search}`
-        }, [])
+            useEffect(() => {
+            +  window.location.href = `${storeConfig.accountUrl}${window.location.search}`
+            }, [])
 
-        return (
-    ```
+            return (
+```
 
 #### `src/pages/login.tsx` 
 Responsible for rendering the Login page. Add the following to allow subsequent pages to reference the user’s session cookie on this page:
 
-    ```tsx
+```tsx
         function Page() {
         useEffect(() => {
         +    window.location.href = +`${storeConfig.loginUrl}${window.location.search}`
         }, [])
 
         return (
-    ```
+```
 ### Step 3: Update other portal environments (Optional)
 If your store uses other environments on the Portal that do not have the `/api/io` route in the url, you must also pass the `orderForm` parameter to these pages when the user navigates from the store in FastStore to these links and add this script at those pages:
 
-    ```tsx
+```js
         <script>
             let params = new URLSearchParams(document.location.search);
             let orderId = params.get("orderFormId");
@@ -172,7 +170,7 @@ If your store uses other environments on the Portal that do not have the `/api/i
             );
             }
         </script>
-    ```
+```
 ## Creating Session Cookie in FastStore for Localhost or Internal URLs
 The service app generates the session cookie on the main domain. However, if the store is using localhost or an internal URL at the checkout, it is necessary to create the cookie manually in the FastStore store. To do so, navigate to the checkout URL and copy the cookie value. For example:
 
@@ -180,8 +178,8 @@ The service app generates the session cookie on the main domain. However, if the
 
 Go back to the FastStore store, open your browser's Developer Console and run the following command to generate the cookie that will be used to sync the `orderForm`:
 
-    ```bash
+```javascript
         document.cookie = "vtex_session={{value of session cookie}}";
-    ```
+```
 After that, you should see the cookie created and the `orderForm` synced.
 
