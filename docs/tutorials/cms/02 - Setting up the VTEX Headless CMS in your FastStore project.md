@@ -51,6 +51,10 @@ By the end of this part of this tutorial, you will be able to see your first def
    ```
    echo "{}" > cms/faststore/translation-keys.json
    ```
+   
+ :::info
+  Once you have the 1.0.7 version of @vtex/cli-plugin-cms it is possible to specify the builder that you want to synchronize.  To do that you should update with the    command ```vtex plugins update``` and create a folder to each one of the builders to be able to specify it. Example: cms/faststore/content-types.json"
+:::
 
 7. Now, open the `content-types.json` file in any code editor of your choice and add the following code:
 
@@ -140,6 +144,12 @@ Let's now sync our changes with the VTEX Headless CMS app and see what happens.
    ```bash
    vtex cms sync
    ```
+:::caution
+    If you have the @vtex/cli-plugin-cms@1.0.7 installed you can use the {builderName} argument to syncronize a specific builder:
+       ```sh
+        vtex cms:sync {builderName}
+       ```
+:::
 
 Once your changes are synced with the VTEX Headless CMS, the terminal will show the following message.
 
