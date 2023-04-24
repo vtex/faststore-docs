@@ -16,7 +16,7 @@ See below the root fields available on the `allProducts` FastStore API Product q
 
 ## Collection query root
 
-See below the root fields available on the `collection` FastStore API Product query.
+See below the root fields available on the `collection` FastStore API Product query. Since collections may have different types, there are different fields associated with each of them: [Brand](#brand), [CategoryTree](#categorytree), and [CollectionPageType](#collectionpagetype).
 
 ## All collections query root
 
