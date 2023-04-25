@@ -906,3 +906,355 @@ See below the root fields available on the `allCollections` FastStore API Produc
 ## Search query root
 
 See below the root fields available on the `search` FastStore API Product query.
+
+
+
+
+### Search
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>productSearchPromise</td>
+      <td>Promise<ProductSearchResult></td>
+      <td>A promise that resolves to the search results for a product.</td>
+    </tr>
+    <tr>
+      <td>searchArgs</td>
+      <td>Omit<SearchArgs, 'type'></td>
+      <td>The search arguments used to filter and sort the product search results.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### ProductSearchResult
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>correction</td>
+      <td>Correction or undefined</td>
+      <td>Specifies whether a correction was made to the search query, or if it is undefined.</td>
+    </tr>
+    <tr>
+      <td>fuzzy</td>
+      <td>String</td>
+      <td>Specifies the fuzzy search term used in the query.</td>
+    </tr>
+    <tr>
+      <td>locale</td>
+      <td>String</td>
+      <td>Specifies the locale used for the search query.</td>
+    </tr>
+    <tr>
+      <td>operator</td>
+      <td>String</td>
+      <td>Specifies the operator used in the search query.</td>
+    </tr>
+    <tr>
+      <td>options</td>
+      <td>Options</td>
+      <td>Specifies the search options used in the query.</td>
+    </tr>
+    <tr>
+      <td>pagination</td>
+      <td>Pagination</td>
+      <td>Specifies the pagination settings used for the search results.</td>
+    </tr>
+    <tr>
+      <td>products</td>
+      <td>Array of products</td>
+      <td>Contains an array of product objects that match the search query.</td>
+    </tr>
+    <tr>
+      <td>query</td>
+      <td>String</td>
+      <td>Specifies the original search query string.</td>
+    </tr>
+    <tr>
+      <td>recordsFiltered</td>
+      <td>Number</td>
+      <td>Specifies the total number of products that match the search query.</td>
+    </tr>
+    <tr>
+      <td>sampling</td>
+      <td>Boolean</td>
+      <td>Specifies whether the search results are a random sample of the total matching products.</td>
+    </tr>
+    <tr>
+      <td>translated</td>
+      <td>Boolean</td>
+      <td>Specifies whether the search query was automatically translated.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Correction
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>misspelled</td>
+      <td>Boolean</td>
+      <td>A flag indicating whether a word is misspelled or not.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Options
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>counts</td>
+      <td>Array of counts</td>
+      <td>An array of counts that represent the number of items in a collection.</td>
+    </tr>
+    <tr>
+      <td>sorts</td>
+      <td>Array of sorts</td>
+      <td>An array of sorts that represent the sorting options available for a collection.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Count
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>Number</td>
+      <td>The number of items in the collection that the API endpoint is returning.</td>
+    </tr>
+    <tr>
+      <td>proxyURL</td>
+      <td>String</td>
+      <td>A URL that can be used to retrieve the same resource through a proxy server.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Sort
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>active</td>
+      <td>Boolean or undefined</td>
+      <td>Determines if the sorting feature is active or not.</td>
+    </tr>
+    <tr>
+      <td>field</td>
+      <td>String</td>
+      <td>Specifies the field to be sorted.</td>
+    </tr>
+    <tr>
+      <td>order</td>
+      <td>String</td>
+      <td>Specifies the order in which the data should be sorted (ascending or descending).</td>
+    </tr>
+    <tr>
+      <td>proxyURL</td>
+      <td>String</td>
+      <td>Specifies the URL of the proxy server to be used for sorting.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Pagination
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>after</td>
+      <td>Array of pages</td>
+      <td>Array of pages after the current page.</td>
+    </tr>
+    <tr>
+      <td>before</td>
+      <td>Array of pages</td>
+      <td>Array of pages before the current page.</td>
+    </tr>
+    <tr>
+      <td>count</td>
+      <td>Number</td>
+      <td>The total number of items across all pages.</td>
+    </tr>
+    <tr>
+      <td>current</td>
+      <td>Page</td>
+      <td>The current page.</td>
+    </tr>
+    <tr>
+      <td>first</td>
+      <td>Page</td>
+      <td>The first page.</td>
+    </tr>
+    <tr>
+      <td>last</td>
+      <td>Page</td>
+      <td>The last page.</td>
+    </tr>
+    <tr>
+      <td>next</td>
+      <td>Page</td>
+      <td>The next page.</td>
+    </tr>
+    <tr>
+      <td>perPage</td>
+      <td>Number</td>
+      <td>The number of items per page.</td>
+    </tr>
+    <tr>
+      <td>previous</td>
+      <td>Page</td>
+      <td>The previous page.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Page
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>index</td>
+      <td>Number</td>
+      <td>The index of the item in the list.</td>
+    </tr>
+    <tr>
+      <td>proxyURL</td>
+      <td>String</td>
+      <td>The URL of the proxy server to be used.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### searchArgs
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>Number</td>
+      <td>The number of search results to return. </td>
+    </tr>
+    <tr>
+      <td>fuzzy</td>
+      <td>String or undefined</td>
+      <td>A string used for fuzzy search. </td>
+    </tr>
+    <tr>
+      <td>hideUnavailableItems</td>
+      <td>Boolean or undefined</td>
+      <td>A boolean value used to hide unavailable items. </td>
+    </tr>
+    <tr>
+      <td>page</td>
+      <td>Number</td>
+      <td>The page number of the search results to return. </td>
+    </tr>
+    <tr>
+      <td>query</td>
+      <td>String or undefined</td>
+      <td>A string used for keyword search. </td>
+    </tr>
+    <tr>
+      <td>selectedFacets</td>
+      <td>Array of SelectedFacets or undefined</td>
+      <td>An array of selected facets used to filter the search results. </td>
+    </tr>
+    <tr>
+      <td>sort</td>
+      <td>Sort or undefined</td>
+      <td>A sort object used to sort the search results. </td>
+    </tr>
+  </tbody>
+</table>
+
+### SelectedFacet
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>key</td>
+      <td>String</td>
+      <td>The name of the selected facet.</td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>String</td>
+      <td>The value of the selected facet.</td>
+    </tr>
+  </tbody>
+</table>
