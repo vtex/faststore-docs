@@ -10,11 +10,7 @@ Keep in mind that the fields below may not be available in the [native FastStore
 
 See below the root fields available on the `product` FastStore API Product query.
 
-
-
-
 ### Item
-## Item
 
 <table>
   <thead>
@@ -118,8 +114,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### Attachment
+
 <table>
   <thead>
     <tr>
@@ -152,8 +148,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### Image
+
 <table>
   <thead>
     <tr>
@@ -191,9 +187,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### Product
-## Product
 
 <table>
   <thead>
@@ -312,8 +306,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### PriceRange
+
 <table>
   <thead>
     <tr>
@@ -336,9 +330,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### Price
-## Price
 
 <table>
   <thead>
@@ -362,9 +354,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### Property
-## Property
 
 <table>
   <thead>
@@ -388,8 +378,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### SkuSpecification
+
 <table>
   <thead>
     <tr>
@@ -412,8 +402,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### SKUSpecificationField
+
 <table>
   <thead>
     <tr>
@@ -441,8 +431,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### SKUSpecificationValues
+
 <table>
   <thead>
     <tr>
@@ -475,9 +465,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### KitItem
-## KitItem
 
 <table>
   <thead>
@@ -501,9 +489,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### ReferenceId
-## ReferenceId
 
 <table>
   <thead>
@@ -527,9 +513,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### Seller
-## Seller
 
 <table>
   <thead>
@@ -568,8 +552,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### ComertialOffer
+
 <table>
   <thead>
     <tr>
@@ -701,8 +685,8 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-
 ### Installments
+
 <table>
   <thead>
     <tr>
@@ -752,7 +736,7 @@ See below the root fields available on the `product` FastStore API Product query
 
 ## All products query root
 
-See below the root fields available on the `allProducts` FastStore API Product query.
+The `allProducts` query root object contains the [native schema product query fields](/reference/api/queries/product) and the [product query root fields](#product-query-root) detailed above.
 
 ## Collection query root
 
@@ -901,16 +885,14 @@ See below the root fields available on the `collection` FastStore API Product qu
 
 ## All collections query root
 
-See below the root fields available on the `allCollections` FastStore API Product query.
+The `allCollections` query root object contains the [native schema collection query fields](/reference/api/queries/collection) and the [collection query root fields](#collection-query-root) detailed above.
 
 ## Search query root
 
 See below the root fields available on the `search` FastStore API Product query.
 
-
-
-
 ### Search
+
 <table>
   <thead>
     <tr>
@@ -933,8 +915,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### ProductSearchResult
+
 <table>
   <thead>
     <tr>
@@ -1002,8 +984,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### Correction
+
 <table>
   <thead>
     <tr>
@@ -1021,8 +1003,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### Options
+
 <table>
   <thead>
     <tr>
@@ -1045,8 +1027,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### Count
+
 <table>
   <thead>
     <tr>
@@ -1069,8 +1051,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### Sort
+
 <table>
   <thead>
     <tr>
@@ -1103,8 +1085,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### Pagination
+
 <table>
   <thead>
     <tr>
@@ -1162,8 +1144,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### Page
+
 <table>
   <thead>
     <tr>
@@ -1186,8 +1168,8 @@ See below the root fields available on the `search` FastStore API Product query.
   </tbody>
 </table>
 
-
 ### searchArgs
+
 <table>
   <thead>
     <tr>
