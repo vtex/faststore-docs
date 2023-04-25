@@ -207,9 +207,6 @@ function Home() {
               Go live with the full VTEX solution for building lightning-fast
               shopping experiences.
             </h2>
-            <Link to="beta/about" className="button-secondary">
-              LEARN MORE
-            </Link>
           </div>
         </div>
       </main>
