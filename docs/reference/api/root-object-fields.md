@@ -758,6 +758,147 @@ See below the root fields available on the `allProducts` FastStore API Product q
 
 See below the root fields available on the `collection` FastStore API Product query. Since collections may have different types, there are different fields associated with each of them: [Brand](#brand), [CategoryTree](#categorytree), and [CollectionPageType](#collectionpagetype).
 
+
+
+
+### Brand
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>Number</td>
+      <td>A unique identifier for the brand.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td>The name of the brand.</td>
+    </tr>
+    <tr>
+      <td>isActive</td>
+      <td>Boolean</td>
+      <td>Indicates whether the brand is currently active or not.</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>String</td>
+      <td>The title of the brand, used for SEO purposes.</td>
+    </tr>
+    <tr>
+      <td>metaTagDescription</td>
+      <td>String</td>
+      <td>The meta tag description for the brand, used for SEO purposes.</td>
+    </tr>
+    <tr>
+      <td>imageURL</td>
+      <td>String or null</td>
+      <td>The URL of the brand's image, if available.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### CategoryTree
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MetaTagDescription</td>
+      <td>String</td>
+      <td>The meta tag description for the category page.</td>
+    </tr>
+    <tr>
+      <td>Title</td>
+      <td>String</td>
+      <td>The title of the category page.</td>
+    </tr>
+    <tr>
+      <td>children</td>
+      <td>Array of CategoryTrees</td>
+      <td>An array of child categories for the current category.</td>
+    </tr>
+    <tr>
+      <td>haschildren</td>
+      <td>Boolean</td>
+      <td>A flag indicating whether the current category has child categories.</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>String</td>
+      <td>The unique identifier for the category.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td>The name of the category.</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>String</td>
+      <td>The URL of the category page.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### CollectionPageType
+## CollectionPageType
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>Number</td>
+      <td>A unique identifier for the collection page.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td>The name of the collection page.</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>String</td>
+      <td>The URL of the collection page.</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>String</td>
+      <td>The title of the collection page.</td>
+    </tr>
+    <tr>
+      <td>MetaTagDescription</td>
+      <td>String</td>
+      <td>The meta tag description of the collection page.</td>
+    </tr>
+    <tr>
+      <td>pageType</td>
+      <td>String</td>
+      <td>The type of the collection page.</td>
+    </tr>
+  </tbody>
+</table>
+
 ## All collections query root
 
 See below the root fields available on the `allCollections` FastStore API Product query.
