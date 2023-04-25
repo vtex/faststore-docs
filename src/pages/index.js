@@ -65,31 +65,6 @@ function Home() {
               </p>
             </div>
           </div>
-
-          <Link
-            to="beta/about"
-            className="mb-2 lg:mt-16 group flex lg:flex-row flex-col lg:items-center bg-whiteIce hover:no-underline content-center px-8 py-6 gap-2 rounded"
-          >
-            <div>
-              <h2 className="text-lg text-fontSecondary font-VTEXMedium">
-                VTEX + FastStore Closed Beta
-              </h2>
-              <p className="text-base text-fontSecondary lg:mr-40">
-                To go live with the full VTEX solution for building
-                lightning-fast shopping experiences, first check the
-                requirements to join the Closed Beta program.
-              </p>
-            </div>
-            <div>
-              <button className="button-secondary block min-w-max group-hover:bg-[#000711]">
-                LEARN MORE
-              </button>
-            </div>
-          </Link>
-          <p className="text-[16px] text-details pl-8 mb-16">
-            DISCLAIMER: Joining the Beta program is mandatory to benefit from
-            VTEX&rsquo;s support, WebOps and Headless CMS.
-          </p>
         </div>
         <hr />
         <div className="mx-auto px-4 w-full lg:max-w-[1170px] my-24">
@@ -223,10 +198,6 @@ function Home() {
                 </div>
               </div>
             </div>
-            <i className="text-xs float-right">
-              * Joining the Beta program is mandatory to benefit from
-              VTEX&rsquo;s support, WebOps and Headless CMS.
-            </i>
           </div>
         </div>
 

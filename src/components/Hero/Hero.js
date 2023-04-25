@@ -28,7 +28,7 @@ function Hero() {
                   to="https://docs.google.com/forms/d/e/1FAIpQLSfmNyT5BepQw2AFyHnrI9-4fqvkOTWvdeBLdkQgxhQ2r0-g4A/viewform"
                   className="button-tertiary"
                 >
-                  Join the waiting list
+                  Request access
                 </Link>
               </div>
             </div>
