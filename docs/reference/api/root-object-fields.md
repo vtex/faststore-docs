@@ -781,13 +781,13 @@ See below the root fields available on the `collection` FastStore API Product qu
     <tr>
       <td>imageURL</td>
       <td>String or null</td>
-      <td>The URL of the brand's image, if available.</td>
+      <td>The URL of the brand image, if available.</td>
     </tr>
   </tbody>
 </table>
 
-
 ### CategoryTree
+
 <table>
   <thead>
     <tr>
@@ -835,9 +835,7 @@ See below the root fields available on the `collection` FastStore API Product qu
   </tbody>
 </table>
 
-
 ### CollectionPageType
-## CollectionPageType
 
 <table>
   <thead>
@@ -902,12 +900,12 @@ See below the root fields available on the `search` FastStore API Product query.
   <tbody>
     <tr>
       <td>productSearchPromise</td>
-      <td>Promise<ProductSearchResult></td>
+      <td>Promise&lt;ProductSearchResult&gt;</td>
       <td>A promise that resolves to the search results for a product.</td>
     </tr>
     <tr>
       <td>searchArgs</td>
-      <td>Omit<SearchArgs, 'type'></td>
+      <td>Omit&lt;SearchArgs, 'type'&gt;</td>
       <td>The search arguments used to filter and sort the product search results.</td>
     </tr>
   </tbody>
@@ -932,27 +930,27 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>fuzzy</td>
       <td>String</td>
-      <td>Specifies the fuzzy search term used in the query.</td>
+      <td>Fuzzy search term used in the query.</td>
     </tr>
     <tr>
       <td>locale</td>
       <td>String</td>
-      <td>Specifies the locale used for the search query.</td>
+      <td>Locale used for the search query.</td>
     </tr>
     <tr>
       <td>operator</td>
       <td>String</td>
-      <td>Specifies the operator used in the search query.</td>
+      <td>Operator used in the search query.</td>
     </tr>
     <tr>
       <td>options</td>
       <td>Options</td>
-      <td>Specifies the search options used in the query.</td>
+      <td>Search options used in the query.</td>
     </tr>
     <tr>
       <td>pagination</td>
       <td>Pagination</td>
-      <td>Specifies the pagination settings used for the search results.</td>
+      <td>Pagination settings used for the search results.</td>
     </tr>
     <tr>
       <td>products</td>
@@ -962,7 +960,7 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>query</td>
       <td>String</td>
-      <td>Specifies the original search query string.</td>
+      <td>Original search query string.</td>
     </tr>
     <tr>
       <td>recordsFiltered</td>
@@ -972,12 +970,12 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>sampling</td>
       <td>Boolean</td>
-      <td>Specifies whether the search results are a random sample of the total matching products.</td>
+      <td>Indicates whether the search results are a random sample of the total matching products.</td>
     </tr>
     <tr>
       <td>translated</td>
       <td>Boolean</td>
-      <td>Specifies whether the search query was automatically translated.</td>
+      <td>Indicates whether the search query was automatically translated.</td>
     </tr>
   </tbody>
 </table>
@@ -1015,12 +1013,12 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>counts</td>
       <td>Array of counts</td>
-      <td>An array of counts that represent the number of items in a collection.</td>
+      <td>An array of counts that represent the number of items in a search.</td>
     </tr>
     <tr>
       <td>sorts</td>
       <td>Array of sorts</td>
-      <td>An array of sorts that represent the sorting options available for a collection.</td>
+      <td>An array of sorts that represent the sorting options available for a search.</td>
     </tr>
   </tbody>
 </table>
@@ -1039,7 +1037,7 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>count</td>
       <td>Number</td>
-      <td>The number of items in the collection that the API endpoint is returning.</td>
+      <td>The number of items in the search that the API endpoint is returning.</td>
     </tr>
     <tr>
       <td>proxyURL</td>
