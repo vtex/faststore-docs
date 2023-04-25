@@ -1066,12 +1066,12 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>field</td>
       <td>String</td>
-      <td>Specifies the field to be sorted.</td>
+      <td>Field to be sorted.</td>
     </tr>
     <tr>
       <td>order</td>
       <td>String</td>
-      <td>Specifies the order in which the data should be sorted (ascending or descending).</td>
+      <td>Specifies the order in which the data should be sorted.</td>
     </tr>
     <tr>
       <td>proxyURL</td>
@@ -1110,22 +1110,22 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>current</td>
       <td>Page</td>
-      <td>The current page.</td>
+      <td>Information about the current page.</td>
     </tr>
     <tr>
       <td>first</td>
       <td>Page</td>
-      <td>The first page.</td>
+      <td>Information about the first page.</td>
     </tr>
     <tr>
       <td>last</td>
       <td>Page</td>
-      <td>The last page.</td>
+      <td>Information about the last page.</td>
     </tr>
     <tr>
       <td>next</td>
       <td>Page</td>
-      <td>The next page.</td>
+      <td>Information about next page.</td>
     </tr>
     <tr>
       <td>perPage</td>
@@ -1135,7 +1135,7 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>previous</td>
       <td>Page</td>
-      <td>The previous page.</td>
+      <td>Information about the previous page.</td>
     </tr>
   </tbody>
 </table>
@@ -1183,12 +1183,12 @@ See below the root fields available on the `search` FastStore API Product query.
     <tr>
       <td>fuzzy</td>
       <td>String or undefined</td>
-      <td>A string used for fuzzy search. </td>
+      <td>A string used for fuzzy search.</td>
     </tr>
     <tr>
       <td>hideUnavailableItems</td>
       <td>Boolean or undefined</td>
-      <td>A boolean value used to hide unavailable items. </td>
+      <td>Indicates whether unavailable items should be hidden. </td>
     </tr>
     <tr>
       <td>page</td>
