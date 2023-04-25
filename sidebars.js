@@ -382,42 +382,4 @@
       ],
     },
   ],
-  betaProgram: [
-    {
-      type: 'category',
-      label: 'About the program',
-      className: 'pb-5 mb-5 border-b labelSidebar',
-      collapsed: false,
-      collapsible: false,
-      items: [
-        'beta/about',
-        'beta/overview',
-        {
-          type: 'link',
-          label: 'Waiting list',
-          href:
-            'https://docs.google.com/forms/d/e/1FAIpQLSfmNyT5BepQw2AFyHnrI9-4fqvkOTWvdeBLdkQgxhQ2r0-g4A/viewform',
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Beta activities',
-      className: 'pb-5 mb-5 border-b labelSidebar',
-      collapsed: false,
-      collapsible: false,
-      items: ['beta/feedback-and-issue-tracking', 'beta/customer-invitation'],
-    },
-    {
-      type: 'category',
-      label: 'Behavior aspects',
-      className: 'labelSidebar',
-      collapsed: false,
-      collapsible: false,
-      items: [
-        'beta/features-and-capabilities',
-        'beta/changes-from-store-framework',
-      ],
-    },
-  ],
 }

@@ -64,14 +64,6 @@ hide_table_of_contents: false
 
 ### New and improved docs
 
-- [FastStore, WebOps & Headless CMS Beta Program](/beta/about) - [#1446](https://github.com/vtex/faststore/pull/1446)
-  - [Program overview and timeline](/beta/overview) - [#1446](https://github.com/vtex/faststore/pull/1446)
-  - [Feedback and issue tracking](/beta/feedback-and-issue-tracking) - [#1446](https://github.com/vtex/faststore/pull/1446)
-  - [Customer invitation](/beta/customer-invitation) - [#1446](https://github.com/vtex/faststore/pull/1446)
-  - [Features and capabilities](/beta/features-and-capabilities) - [#1446](https://github.com/vtex/faststore/pull/1446)
-  - [Changes from Store Framework](/beta/changes-from-store-framework) - [#1446](https://github.com/vtex/faststore/pull/1446)
-
-
 - [Performance Overivew](/how-to-guides/performance) - [#1452](https://github.com/vtex/faststore/pull/1452) 
   - [Getting started with Lighthouse](/how-to-guides/performance/lighthouse) - [#1458](https://github.com/vtex/faststore/pull/1458)
   - [Analyzing a project's bundle size](/how-to-guides/performance/analyzing-a-projects-bundle-size) - [#1453](https://github.com/vtex/faststore/pull/1453)
