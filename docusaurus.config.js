@@ -49,12 +49,6 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'beta/about',
-          position: 'left',
-          label: 'Beta program',
-        },
-        {
           href: '/docs',
           label: 'Documentation',
           position: 'left',
