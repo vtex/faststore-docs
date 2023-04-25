@@ -34,7 +34,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>attachmentsValues</td>
       <td>Array of attachments or undefined</td>
-      <td>An array of attachments related to the item or undefined if there are no attachments.</td>
+      <td>An array of attachments values related to the item or undefined if there are no attachments.</td>
     </tr>
     <tr>
       <td>complementName</td>
@@ -49,17 +49,17 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>images</td>
       <td>Array of images</td>
-      <td>An array of image URLs related to the item.</td>
+      <td>An array of images related to the item.</td>
     </tr>
     <tr>
       <td>isKit</td>
       <td>Boolean</td>
-      <td>A boolean value indicating whether the item is a kit or not.</td>
+      <td>Indicates whether the item is a kit or not.</td>
     </tr>
     <tr>
       <td>isVariantOf</td>
       <td>Product</td>
-      <td>The product that this item is a variant of, if any.</td>
+      <td>The product that this item is a variant of.</td>
     </tr>
     <tr>
       <td>itemId</td>
@@ -69,7 +69,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>kitItems</td>
       <td>Array of KitItems or undefined</td>
-      <td>An array of kit items or undefined if the item is not a kit.</td>
+      <td>An array of associated kit items or undefined if the item is not a kit.</td>
     </tr>
     <tr>
       <td>measurementUnit</td>
@@ -99,7 +99,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>sellers</td>
       <td>Array of Sellers</td>
-      <td>An array of sellers related to the item.</td>
+      <td>An array of sellers that sell the item.</td>
     </tr>
     <tr>
       <td>unitMultiplier</td>
@@ -143,7 +143,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>domainValues</td>
       <td>String</td>
-      <td>A list of acceptable values for the attachment, if applicable.</td>
+      <td>Domain values of the attachment.</td>
     </tr>
   </tbody>
 </table>
@@ -201,7 +201,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>brand</td>
       <td>String</td>
-      <td>The brand name of the product.</td>
+      <td>The name of the product brand.</td>
     </tr>
     <tr>
       <td>brandId</td>
@@ -231,7 +231,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>clusterHighlights</td>
       <td>Record<String, any></td>
-      <td>The list of cluster highlights associated with the product.</td>
+      <td>Cluster highlights associated with the product.</td>
     </tr>
     <tr>
       <td>description</td>
@@ -296,7 +296,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>skuSpecifications</td>
       <td>Array of SkuSpecifications or undefined</td>
-      <td>The list of SKU specifications associated with the product.</td>
+      <td>The list of SKU specifications associated with the product or undefined if there are no specifications.</td>
     </tr>
     <tr>
       <td>specificationGroups</td>
@@ -392,12 +392,12 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>field</td>
       <td>SKUSpecificationField</td>
-      <td>Specifies the name or type of the SKU specification field.</td>
+      <td>SKU specification field object.</td>
     </tr>
     <tr>
       <td>value</td>
       <td>Array of SKUSpecificationValues</td>
-      <td>Specifies the values associated with the SKU specification field.</td>
+      <td>Values associated with the SKU specification field.</td>
     </tr>
   </tbody>
 </table>
@@ -527,7 +527,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>addToCartLink</td>
       <td>String</td>
-      <td>The URL link to add the product to cart for this seller.</td>
+      <td>The URL to add the product to cart for this seller.</td>
     </tr>
     <tr>
       <td>comertialOffer</td>
@@ -586,7 +586,7 @@ See below the root fields available on the `product` FastStore API Product query
     <tr>
       <td>DeliverySlaSamplesPerRegion</td>
       <td>Record<string, DeliverySlaSamples></td>
-      <td>A record of delivery SLA samples for this item per region.</td>
+      <td>Delivery SLA samples for this item per region.</td>
     </tr>
     <tr>
       <td>DiscountHighLight</td>
@@ -742,10 +742,8 @@ The `allProducts` query root object contains the [native schema product query fi
 
 See below the root fields available on the `collection` FastStore API Product query. Since collections may have different types, there are different fields associated with each of them: [Brand](#brand), [CategoryTree](#categorytree), and [CollectionPageType](#collectionpagetype).
 
-
-
-
 ### Brand
+
 <table>
   <thead>
     <tr>
