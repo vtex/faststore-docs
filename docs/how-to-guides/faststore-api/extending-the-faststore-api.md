@@ -80,7 +80,11 @@ const resolvers = {
 
 It is important to note that every resolver has [implicit arguments](https://graphql.org/learn/execution/#root-fields-resolvers) aside from what you define when writing your function. This includes the `root` of the type, which means your resolver has access to all information in that type.
 
-For instance, in the example above the resolver can use whatever information is contained in the existing [StoreProduct](/reference/api/objects#storeproduct) type definition. All queries also return the [root object](https://graphql.org/learn/execution/#root-fields-resolvers), so you can also use any data available in this object.
+For instance, in the example above the resolver can use whatever information is contained in the existing [StoreProduct](/reference/api/objects#storeproduct) type definition. All queries also return the [root object](/reference/api/root-object-fields), so you can also use any data available in this object.
+
+:::info
+See the guide on [how to use the FastStore API root object](/how-to-guides-faststore-api/using-the-faststore-api-root-object-fields) and the reference of available [root object fields](/reference/api/root-object-fields).
+:::
 
 ### Step 4 - Get FastStore API schema
 
