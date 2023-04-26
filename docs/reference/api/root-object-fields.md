@@ -657,7 +657,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>teasers</td>
-      <td>Array of Record<string, unknown> or undefined</td>
+      <td>Array of Record&lt;string, unknown&gt; or undefined</td>
       <td>An array of teaser information for this item or undefined if there are no teasers available.</td>
     </tr>
   </tbody>
