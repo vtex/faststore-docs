@@ -76,7 +76,7 @@ const resolvers = {
 }
 ```
 
-#### Using root object fields on your resolvers
+#### Using root object fields
 
 It is important to note that every resolver has [implicit arguments](https://graphql.org/learn/execution/#root-fields-resolvers) aside from what you define when writing your function. This includes the `root` of the type, which means your resolver has access to all information in that type.
 
