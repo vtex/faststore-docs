@@ -232,7 +232,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>clusterHighlights</td>
-      <td>Record<String, any></td>
+      <td>Record&lt;String, any&gt;</td>
       <td>Cluster highlights associated with the product.</td>
     </tr>
     <tr>
@@ -262,7 +262,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>productClusters</td>
-      <td>Record<String, String></td>
+      <td>Record&lt;String, String&gt;</td>
       <td>The list of product clusters associated with the product.</td>
     </tr>
     <tr>
@@ -587,7 +587,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>DeliverySlaSamplesPerRegion</td>
-      <td>Record<string, DeliverySlaSamples></td>
+      <td>Record&lt;string, DeliverySlaSamples&gt;</td>
       <td>Delivery SLA samples for this item per region.</td>
     </tr>
     <tr>
@@ -647,7 +647,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>Teasers</td>
-      <td>Array of Record<string, unknown></td>
+      <td>Array of Record&lt;string, unknown&gt;</td>
       <td>An array of teaser information for this item.</td>
     </tr>
     <tr>
