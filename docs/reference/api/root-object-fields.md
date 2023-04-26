@@ -12,7 +12,7 @@ Learn more about how you can [use the root object fields in your storefront](/ho
 
 See below the root fields available on the `product` FastStore API Product query.
 
-### Item
+### Root (Product)
 
 <table>
   <thead>
@@ -742,9 +742,9 @@ The `allProducts` query root object contains the [native schema product query fi
 
 ## Collection query root
 
-See below the root fields available on the `collection` FastStore API Product query. Since collections may have different types, there are different fields associated with each of them: [Brand](#brand), [CategoryTree](#categorytree), and [CollectionPageType](#collectionpagetype).
+See below the root fields available on the `collection` FastStore API Product query. Since collections may have different types, there are different fields associated with each of them: [Brand](#root-brand), [CategoryTree](#root-categorytree), and [CollectionPageType](#root-collectionpagetype).
 
-### Brand
+### Root (Brand)
 
 <table>
   <thead>
@@ -788,7 +788,7 @@ See below the root fields available on the `collection` FastStore API Product qu
   </tbody>
 </table>
 
-### CategoryTree
+### Root (CategoryTree)
 
 <table>
   <thead>
@@ -837,7 +837,7 @@ See below the root fields available on the `collection` FastStore API Product qu
   </tbody>
 </table>
 
-### CollectionPageType
+### Root (CollectionPageType)
 
 <table>
   <thead>
@@ -889,7 +889,7 @@ The `allCollections` query root object contains the [native schema collection qu
 
 See below the root fields available on the `search` FastStore API Product query.
 
-### Search
+### Root (Search)
 
 <table>
   <thead>
