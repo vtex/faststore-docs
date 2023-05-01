@@ -22,6 +22,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Documentation
 
+* Fixes of i18n on file Using the onlySettings property in a content type.md according to task LOC-10268.
+
 * cms ([#1573](https://github.com/vtex/faststore/issues/1573)) ([f540edd](https://github.com/vtex/faststore/commit/f540edd5e8c7ea10e8cd26b1c6f65b10ecce67c4))
 
 
