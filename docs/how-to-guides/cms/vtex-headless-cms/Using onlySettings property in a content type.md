@@ -4,10 +4,10 @@ The `onlySetting` property indicates that a [content type](https://www.faststore
 
 You can use this attribute for content types that do not require storefront content, such as SEO pages.
 
-| Image 1                                                                                                                    | Image 2                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| ![without-property](https://user-images.githubusercontent.com/67270558/227936062-02e15860-c6d6-4525-9eed-19c37abfd626.png) | ![with-property](https://user-images.githubusercontent.com/67270558/227936232-fa8dfab7-2f01-42d1-9f68-b2ab8623a3af.png) |
-| Image 1 - Content type without the `onlySettings` property and with two tabs: **Sections** and **SEO**.                    | Image 2 - Content type with the `onlySettings` property and one settings tab: **SEO**.                                  |
+| Image 1  | Image 2  |  
+|---|---|
+| ![with-property](https://user-images.githubusercontent.com/67270558/227936062-02e15860-c6d6-4525-9eed-19c37abfd626.png)  | ![without-property](https://user-images.githubusercontent.com/67270558/227936232-fa8dfab7-2f01-42d1-9f68-b2ab8623a3af.png)  | 
+| Image 1 - Content type with `onlySettings` and with one tab for settings: **SEO**. | Image 2 - Content type without `onlySettings` and with two tabs: **Sections** and **SEO**. | 
 
 This property ensures the content type page displays only the available settings without the **Sections** tab. Follow the steps below to use the `onlySettings` property for your desired content type.
 
