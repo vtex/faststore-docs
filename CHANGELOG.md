@@ -21,6 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 ### Documentation
+* Fixed: Using isSingleton property in a contenty type.md according to task LOC-10269.
 
 * Fixes of i18n on file Using the onlySettings property in a content type.md according to task LOC-10268.
 
