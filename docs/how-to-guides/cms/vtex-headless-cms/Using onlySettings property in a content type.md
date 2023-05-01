@@ -11,7 +11,7 @@ You can use this attribute for content types that do not require storefront cont
 
 This property ensures the content type page displays only the available settings without the **Sections** tab. Follow the steps below to use the `onlySettings` property for your desired content type.
 
-## Step-by-step instructions
+## Step-by-step 
 1. Go to the store repository and access  `CMS` > `content-types.json`.
 2. Choose a content type and set the `onlySettings` property as `true`. For example:
 
