@@ -572,7 +572,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>BuyTogether</td>
-      <td>[any]</td>
+      <td>[Any]</td>
       <td>An array of items that can be purchased together with this item.</td>
     </tr>
     <tr>
