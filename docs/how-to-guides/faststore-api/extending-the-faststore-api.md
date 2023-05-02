@@ -12,8 +12,6 @@ Once you have implemented the schema extension in your code, you can run a local
 
 ## Before starting
 
-Before extending the schema, check whether the [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) contains the information you need. If it does not, follow the steps below to [extend the schema](#step-by-step).
-
 Note that even though you can add information to the FastStore API schema, you must be careful not to over-fetch data on your pages. See the [best practices for fetching data on your storefront](/how-to-guides/faststore-api/fetching-api-data#best-practices-for-fetching-data).
 
 ## Step by step
@@ -62,7 +60,7 @@ const typeDefs = `
 
 Resolvers are the functions that give meaning to the data you have structured in the type definitions. This means a resolver will be executed when the corresponding piece of information is queried.
 
-A resolver can perform an operation on an existing field or fetch data from a proprietary API, for example.
+A resolver can perform an operation on an existing field, get data from the query root, or fetch data from a third party API, for example.
 
 You can create your resolvers like in the following code example.
 
@@ -78,9 +76,29 @@ const resolvers = {
 }
 ```
 
+#### Using root object fields
+
 It is important to note that every resolver has [implicit arguments](https://graphql.org/learn/execution/#root-fields-resolvers) aside from what you define when writing your function. This includes the `root` of the type, which means your resolver has access to all information in that type.
 
-For instance, in the example above the resolver can use whatever information is contained in the existing [StoreProduct](/reference/api/objects#storeproduct) type definition. All queries also return the [root object](https://graphql.org/learn/execution/#root-fields-resolvers), so you can also use any data available in this object.
+For instance, in the example above the resolver can use whatever information is contained in the existing [StoreProduct](/reference/api/objects#storeproduct) type definition. All queries also return the [root object](/reference/api/root-object-fields), so you can also use any data available in this object. This minimizes the need for making additional API requests in your storefront, improving site performance.
+
+See the example below to learn how to use the FastStore API [root object fields](/reference/api/root-object-fields) in your custom resolvers:
+
+```ts
+const resolvers = {
+  StoreProduct: {
+    measurementUnit: async (root, args, context) => {
+      root.measurementUnit
+    }
+  }
+}
+```
+
+In the example above, the resolver fetches the `measurementUnit` field, which is not available in the native FastStore API schema, but is in the `product` query root.
+
+:::info
+See the reference documentation of available [root object fields](/reference/api/root-object-fields).
+:::
 
 ### Step 4 - Get FastStore API schema
 

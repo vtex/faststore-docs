@@ -62,7 +62,7 @@ You can use the GraphQL playground below to test and explore the FastStore API.
           }
         }"/>
 
-You can also install the `@faststore/api` dependency in your project to start exploring the data layer by running a local server. Learn more in the [Get started guide](/references/api/get-started).
+You can also install the `@faststore/api` dependency in your project to start exploring the data layer by running a local server. Learn more in the [Get started guide](/reference/api/get-started).
 
 ## Going beyond
 

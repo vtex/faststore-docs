@@ -312,6 +312,7 @@
                 'reference/api/inputs',
                 'reference/api/enums',
                 'reference/api/scalars',
+                'reference/api/root-object-fields'
               ],
             },
           ],
