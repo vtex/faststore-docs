@@ -5,7 +5,7 @@ The FastStore API provides access to additional data fields that are not include
 :::caution
 Keep in mind that the fields below may not be available in the [native FastStore GraphQL schema](/reference/api/queries). To use the ones that are not available in the native schema, you must [extend the schema](/how-to-guides/faststore-api/extending-the-faststore-api).
 
-Learn more about how you can [use the root object fields in your storefront](/how-to-guides-faststore-api/extending-the-faststore-api#using-root-object-fields).
+Learn more about how you can [use the root object fields in your storefront](/how-to-guides/faststore-api/extending-the-faststore-api#using-root-object-fields).
 :::
 
 ## Product query root
