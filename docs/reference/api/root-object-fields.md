@@ -30,12 +30,12 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>attachments</td>
-      <td>[Attachment]</td>
+      <td>[<a href="#attachment">Attachment</a>]</td>
       <td>An array of attachments related to the item.</td>
     </tr>
     <tr>
       <td>attachmentsValues</td>
-      <td>[Attachment] or undefined</td>
+      <td>[<a href="#attachment">Attachment</a>] or undefined</td>
       <td>An array of attachments values related to the item or undefined if there are no attachments.</td>
     </tr>
     <tr>
@@ -50,7 +50,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>images</td>
-      <td>[Image]</td>
+      <td>[<a href="#image">Image</a>]</td>
       <td>An array of images related to the item.</td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>isVariantOf</td>
-      <td>Product</td>
+      <td><a href="#product">Product</a></td>
       <td>The product that this item is a variant of.</td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>kitItems</td>
-      <td>[KitItem] or undefined</td>
+      <td>[<a href="#kititem">KitItem</a>] or undefined</td>
       <td>An array of associated kit items or undefined if the item is not a kit.</td>
     </tr>
     <tr>
@@ -95,12 +95,12 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>referenceId</td>
-      <td>[ReferenceId]</td>
+      <td>[<a href="#referenceid">ReferenceId</a>]</td>
       <td>An array of reference IDs related to the item.</td>
     </tr>
     <tr>
       <td>sellers</td>
-      <td>[Seller]</td>
+      <td>[<a href="#seller">Seller</a>]</td>
       <td>An array of sellers that sell the item.</td>
     </tr>
     <tr>
@@ -257,7 +257,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>priceRange</td>
-      <td>PriceRange</td>
+      <td><a href="#pricerange">PriceRange</a></td>
       <td>The price range of the product.</td>
     </tr>
     <tr>
@@ -282,7 +282,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>properties</td>
-      <td>[Property]</td>
+      <td>[<a href="#property">Property</a>]</td>
       <td>The list of properties associated with the product.</td>
     </tr>
     <tr>
@@ -292,12 +292,12 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>selectedProperties</td>
-      <td>[Property]</td>
+      <td>[<a href="#property">Property</a>]</td>
       <td>The list of selected properties associated with the product.</td>
     </tr>
     <tr>
       <td>skuSpecifications</td>
-      <td>Array of SkuSpecifications or undefined</td>
+      <td>[<a href="#skuspecification">SkuSpecification</a>] or undefined</td>
       <td>The list of SKU specifications associated with the product or undefined if there are no specifications.</td>
     </tr>
     <tr>
@@ -321,12 +321,12 @@ See below the root fields available on the `product` FastStore API Product query
   <tbody>
     <tr>
       <td>listPrice</td>
-      <td>Price</td>
+      <td><a href="#price">Price</a></td>
       <td>The original or suggested price of the product.</td>
     </tr>
     <tr>
       <td>sellingPrice</td>
-      <td>Price</td>
+      <td><a href="#price">Price</a></td>
       <td>The current selling price of the product.</td>
     </tr>
   </tbody>
@@ -393,12 +393,12 @@ See below the root fields available on the `product` FastStore API Product query
   <tbody>
     <tr>
       <td>field</td>
-      <td>SKUSpecificationField</td>
+      <td><a href="#skuspecificationfield">SKUSpecificationField</a></td>
       <td>SKU specification field object.</td>
     </tr>
     <tr>
       <td>value</td>
-      <td>[SKUSpecificationValue]</td>
+      <td>[<a href="#skuspecificationvalue">SKUSpecificationValue</a>]</td>
       <td>Values associated with the SKU specification field.</td>
     </tr>
   </tbody>
@@ -433,7 +433,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-### SKUSpecificationValues
+### SKUSpecificationValue
 
 <table>
   <thead>
@@ -533,7 +533,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>comertialOffer</td>
-      <td>ComertialOffer</td>
+      <td><a href="#comertialoffer">ComertialOffer</a></td>
       <td>The commercial offer details for this seller.</td>
     </tr>
     <tr>
@@ -582,7 +582,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>DeliverySlaSamples</td>
-      <td>[DeliverySlaSample]</td>
+      <td>[<a href="#deliveryslasample">DeliverySlaSample</a>]</td>
       <td>An array of delivery SLA (Service Level Agreement) samples for this item.</td>
     </tr>
     <tr>
@@ -607,7 +607,7 @@ See below the root fields available on the `product` FastStore API Product query
     </tr>
     <tr>
       <td>Installments</td>
-      <td>Array of Installments</td>
+      <td>[<a href="#installment">Installment</a>]</td>
       <td>An array of installment options available for this item.</td>
     </tr>
     <tr>
@@ -663,7 +663,7 @@ See below the root fields available on the `product` FastStore API Product query
   </tbody>
 </table>
 
-### DeliverySlaSamples
+### DeliverySlaSample
 
 <table>
   <thead>
@@ -811,7 +811,7 @@ See below the root fields available on the `collection` FastStore API Product qu
     </tr>
     <tr>
       <td>children</td>
-      <td>[CategoryTree]</td>
+      <td>[<a href="#root-categorytree">CategoryTree</a>]</td>
       <td>An array of child categories for the current category.</td>
     </tr>
     <tr>
@@ -902,12 +902,12 @@ See below the root fields available on the `search` FastStore API Product query.
   <tbody>
     <tr>
       <td>productSearchPromise</td>
-      <td>Promise&lt;ProductSearchResult&gt;</td>
+      <td>Promise&lt;<a href="#productsearchresult">ProductSearchResult</a>&gt;</td>
       <td>A promise that resolves to the search results for a product.</td>
     </tr>
     <tr>
       <td>searchArgs</td>
-      <td>Omit&lt;SearchArgs, 'type'&gt;</td>
+      <td>Omit&lt;<a href="#searchargs">SearchArgs</a>, 'type'&gt;</td>
       <td>The search arguments used to filter and sort the product search results.</td>
     </tr>
   </tbody>
@@ -926,7 +926,7 @@ See below the root fields available on the `search` FastStore API Product query.
   <tbody>
     <tr>
       <td>correction</td>
-      <td>Correction or undefined</td>
+      <td><a href="#correction">Correction</a> or undefined</td>
       <td>Specifies whether a correction was made to the search query, or if it is undefined.</td>
     </tr>
     <tr>
@@ -946,17 +946,17 @@ See below the root fields available on the `search` FastStore API Product query.
     </tr>
     <tr>
       <td>options</td>
-      <td>Options</td>
+      <td><a href="#options">Options</a></td>
       <td>Search options used in the query.</td>
     </tr>
     <tr>
       <td>pagination</td>
-      <td>Pagination</td>
+      <td><a href="#pagination">Pagination</a></td>
       <td>Pagination settings used for the search results.</td>
     </tr>
     <tr>
       <td>products</td>
-      <td>[Product]</td>
+      <td>[<a href="#product">Product</a>]</td>
       <td>Contains an array of product objects that match the search query.</td>
     </tr>
     <tr>
@@ -1014,12 +1014,12 @@ See below the root fields available on the `search` FastStore API Product query.
   <tbody>
     <tr>
       <td>counts</td>
-      <td>[Count]</td>
+      <td>[<a href="#count">Count</a>]</td>
       <td>An array of counts that represent the number of items in a search.</td>
     </tr>
     <tr>
       <td>sorts</td>
-      <td>[Sort]</td>
+      <td>[<a href="#sort">Sort</a>]</td>
       <td>An array of sorts that represent the sorting options available for a search.</td>
     </tr>
   </tbody>
@@ -1096,12 +1096,12 @@ See below the root fields available on the `search` FastStore API Product query.
   <tbody>
     <tr>
       <td>after</td>
-      <td>[Page]</td>
+      <td>[<a href="#page">Page</a>]</td>
       <td>Array of pages after the current page.</td>
     </tr>
     <tr>
       <td>before</td>
-      <td>[Page]</td>
+      <td>[<a href="#page">Page</a>]</td>
       <td>Array of pages before the current page.</td>
     </tr>
     <tr>
@@ -1116,12 +1116,12 @@ See below the root fields available on the `search` FastStore API Product query.
     </tr>
     <tr>
       <td>first</td>
-      <td>Page</td>
+      <td><a href="#page">Page</a></td>
       <td>Information about the first page.</td>
     </tr>
     <tr>
       <td>last</td>
-      <td>Page</td>
+      <td><a href="#page">Page</a></td>
       <td>Information about the last page.</td>
     </tr>
     <tr>
@@ -1136,7 +1136,7 @@ See below the root fields available on the `search` FastStore API Product query.
     </tr>
     <tr>
       <td>previous</td>
-      <td>Page</td>
+      <td><a href="#page">Page</a></td>
       <td>Information about the previous page.</td>
     </tr>
   </tbody>
@@ -1204,12 +1204,12 @@ See below the root fields available on the `search` FastStore API Product query.
     </tr>
     <tr>
       <td>selectedFacets</td>
-      <td>[SelectedFacet] or undefined</td>
+      <td>[<a href="#selectedfacet">SelectedFacet</a>] or undefined</td>
       <td>An array of selected facets used to filter the search results. </td>
     </tr>
     <tr>
       <td>sort</td>
-      <td>Sort or undefined</td>
+      <td><a href="#sort">Sort</a> or undefined</td>
       <td>A sort object used to sort the search results. </td>
     </tr>
   </tbody>
