@@ -104,6 +104,7 @@ Here's the implementation of the `Image` component:
 
 
 The `Image` component takes the following props:
+
 | Prop | Description |
 | ------ | --------------- |
 |  `src`  |  The image source URL. |
