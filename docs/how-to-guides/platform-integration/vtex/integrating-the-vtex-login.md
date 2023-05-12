@@ -25,7 +25,7 @@ The VTEX Login is provided by the `vtexcommercestable` environment and uses a su
 By the end of this step, changes will be live to all end-users, meaning that once shoppers finish logging in to your store, they will be redirected back to your website's main domain.
 
 1. Access the VTEX Admin.
-2. Go to **Store Setup > CMS > Layout**.
+2. Go to **Storefront > Layout**.
 3. In the left-side navigation menu, click on **CMS**.
 4. Click on **HTML Templates** and open the **Home** file.
 5. Add the following script to the Home's `<head>`.
