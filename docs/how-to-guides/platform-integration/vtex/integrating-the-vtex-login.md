@@ -14,7 +14,7 @@ The VTEX Login is provided by the `vtexcommercestable` environment and uses a su
 ## Before you start
 
 - Ensure you have already [configured the custom domain name of your FastStore website](/how-to-guides/platform-integration/vtex/hosting-a-faststore-vtex-website).
-- Stores using Portal (Legacy) technology must have the secure domain on VTEX IO. To do, please open a ticket with the [VTEX support team](https://help.vtex.com/support) requesting a domain migration on the secure domain from Portal (Legacy) to VTEX IO. 
+- Stores that currently use Portal (Legacy) technology are required to update their `vtex.edition-business@0.x` to `vtex.edition-store@5.x,`  and to migrate their secure domain to VTEX IO. To make these changes, please open a support ticket with the [VTEX support team](https://help.vtex.com/support) and request that the [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) installed in your account be updated and that your secure domain be migrated from Portal (Legacy) to VTEX IO.
 
 ---
 
