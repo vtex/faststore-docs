@@ -35,6 +35,13 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     announcementBar: {
+      id: 'cnew-portal',
+      content: `This portal for FastStore v1 is no longer updated. Access the new FastStore v2.`,
+      textColor: 'var(--ifm-color-details)',
+      backgroundColor: 'var(--ifm-tag-highlight)',
+      isCloseable: false,
+    },
+    announcementBar: {
       id: 'csat',
       content: `📢  We’d love to hear about your experience with our Documentation Portal.`,
       textColor: 'var(--ifm-color-details)',
