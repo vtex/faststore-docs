@@ -35,8 +35,9 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     announcementBar: {
-      id: 'csat',
-      content: `📢  We’d love to hear about your experience with our Documentation Portal.`,
+      id: 'new_portal',
+      content: 
+      `📢 <span style="color:var(--ifm-color-rebel-pink); background-color:var(--ifm-tag-highlight); padding:0.5em; margin:0.3em; border-radius:5px; font-weight: bold" > FastStore 1.0 is no longer updated. Go to the <a style="color:var(--ifm-link-color)" href="https://faststore.dev"> FastStore 2.0 </a> new portal. </span>`,
       textColor: 'var(--ifm-color-details)',
       backgroundColor: 'var(--ifm-tag-highlight)',
       isCloseable: false,
