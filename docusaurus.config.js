@@ -37,7 +37,7 @@ module.exports = {
     announcementBar: {
       id: 'new_portal',
       content: 
-      `📢 <span style="color:var(--ifm-color-rebel-pink); background-color:var(--ifm-tag-highlight); padding:0.5em; margin:0.3em; border-radius:5px; font-weight: bold" > FastStore 1.0 is no longer updated. Go to the <a style="color:var(--ifm-link-color)" href="https://faststore.dev"> FastStore 2.0 </a> new portal. </span>`,
+      `📢 <span style="color:var(--ifm-color-rebel-pink); background-color:var(--ifm-tag-highlight); padding:0.5em; margin:0.3em; border-radius:5px; font-weight: bold" > FastStore 1.0 is no longer receiving updates. Please visit the new portal for <a style="color:var(--ifm-link-color)" href="https://faststore.dev"> FastStore 2.0 </a>.</span>`,
       textColor: 'var(--ifm-color-details)',
       backgroundColor: 'var(--ifm-tag-highlight)',
       isCloseable: false,
