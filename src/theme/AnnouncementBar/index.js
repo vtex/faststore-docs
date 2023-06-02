@@ -10,7 +10,6 @@ import { useThemeConfig, useAnnouncementBar } from '@docusaurus/theme-common'
 import { translate } from '@docusaurus/Translate'
 import IconClose from '@theme/IconClose'
 import styles from './styles.module.css'
-import FeedbackModal from '../../components/FeedbackModal/FeedbackModal'
 import { Modal } from '@faststore/ui'
 export default function AnnouncementBar() {
   const handleClose = () => setIsOpen(false)
@@ -40,17 +39,6 @@ export default function AnnouncementBar() {
             __html: content,
           }}
         />
-        <div className="inline text-rebelPink">
-          <button onClick={() => setIsOpen(true)}>Take the survey!</button>
-          <Modal isOpen={isOpen} onDismiss={handleClose}>
-            <FeedbackModal
-              onClick={() => {
-                handleClose
-                close()
-              }}
-            />
-          </Modal>
-        </div>
       </div>
       {isCloseable ? (
         <button
