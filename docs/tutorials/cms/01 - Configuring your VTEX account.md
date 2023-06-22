@@ -59,29 +59,27 @@ Now you can check the VTEX Headless CMS interface by accessing the VTEX Admin an
 
 Next, let's configure the URLs of the webhooks used by the VTEX Headless CMS app.
 
-1. In the VTEX Admin, access **Storefront > Headless CMS**
-2. Select **CREATE NEW**.
-3. Fill the name of your Project with `Faststore`.
-4. If you're using the VTEX CI/CD, you must fill in the **Build Webhook URL** field with the following value. 
+1. In the VTEX Admin, access **Apps > My apps**
+2. Look for the **CMS (alpha)** app and click on **Settings**.
+3. Select **Add More**.
+4. Fill in the **Project ID** field with `faststore`.
+5. If you're using the VTEX CI/CD, you must fill in the **Build Webhook URL** field with the following value. _Replace the values between curly brackets according to your scenario._
 
    ```
    https://app.io.vtex.com/vtex.cms-builder-sf-jamstack/v1/{account}/{workspace}/build-releases
    ```
-_Replace the values between curly brackets according to your scenario._
 
    :::info
-   When an editor clicks to publish a page using the VTEX Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the status of that page to `publishing`. The CMS, then, waits for the content to be built in the background.
+   When an editor clicks to publish a page using the VTEX Headless CMS interface, the CMS calls the **Build Webhook URL**, which changes the status of that page to `publishing`. The CMS waits for the content to be built in the background.
    :::
 
-5. Now, fill in the **Production base URL** filed with your production URL. _Replace the values between curly brackets according to your scenario._
+6. Now, fill in the **Production base URL** field with your production URL. _Replace the values between curly brackets according to your scenario._
 
 ```
 https://www.{account}.com/
 ```
 
-8. Click on **CREATE**
-
-![CMS Settings](https://vtexhelp.vtexassets.com/assets/docs/src/cms-settings2___54ec9a22584b5aad09d0b403993cbee2.png)
+7. Click on **SAVE**
 
 ### Step 4 - Communicating WebOps updates to the Headless CMS
 
