@@ -47,7 +47,7 @@ import { createSessionStore } from '@faststore/sdk'
 import type { Session } from '@faststore/sdk'
 ```
 
-See in the example below how these are used in the [Next.js store](https://github.com/vtex-sites/nextjs.store) to export other functions that update session information and validate them with the [FastStore API](https://www.faststore.dev/reference/api/faststore-api).
+See in the example below how these are used in the [Next.js store](https://github.com/vtex-sites/nextjs.store) to export other functions that update session information and validate them with the [FastStore API](/reference/api/faststore-api).
 
 ```ts
 //src/sdk/session/index.ts
@@ -125,7 +125,7 @@ export const useSession = () => {
 }
 ```
 
-Because of this, if you use one of the [Base Store starters](https://www.faststore.dev/starters/base), you have access to `sessionStore`, `useSession` and `validateSession`.
+Because of this, if you use one of the [Base Store starters](/starters/base), you have access to `sessionStore`, `useSession` and `validateSession`.
 
 See the example below to learn more about how these are used in the [Next.js store](https://github.com/vtex-sites/nextjs.store) to update session data according to shopper regionalization input.
 

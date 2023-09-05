@@ -1,6 +1,6 @@
 # Using the onlySettings property in a content type
 
-The `onlySetting` property indicates that a [content type](https://www.faststore.dev/tutorials/cms-storecomponents/0#content-types) is meant for settings only.
+The `onlySetting` property indicates that a [content type](/tutorials/cms-storecomponents/0#content-types) is meant for settings only.
 
 You can use this attribute for content types that do not require storefront content, such as SEO pages.
 

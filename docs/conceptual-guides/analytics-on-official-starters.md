@@ -17,7 +17,7 @@ This article explains how these starters integrate with analytics features and o
 
 ## Google Tag Manager
 
-Our official starters include built-in **Google Tag Manager (GTM)** scripts, so developers don't have to worry about manually implementing the GTM script to their website nor configuring debug query strings related to [Partytown](https://www.faststore.dev/how-to-guides/troubleshooting/analytics-and-partytown#google-tag-assistant-is-not-working). 
+Our official starters include built-in **Google Tag Manager (GTM)** scripts, so developers don't have to worry about manually implementing the GTM script to their website nor configuring debug query strings related to [Partytown](/how-to-guides/troubleshooting/analytics-and-partytown#google-tag-assistant-is-not-working). 
 
 Our official starters come with two GTM scripts in the `src/components/ThirdPartyScripts/GoogleTagManager.tsx` component: one that runs inside Partytown if the `gtm_debug` query string is not present, and one that runs outside Partytown otherwise. 
 
@@ -29,7 +29,7 @@ The **GTM container** being used in your store must be set in the file `store.co
 
 ## Firing events
 
-The [`sendAnalyticsEvent`](https://www.faststore.dev/reference/sdk/analytics/sendAnalyticsEvent) function is used to fire analytics events. All [**GA4 Enhanced Commerce events**](https://developers.google.com/analytics/devguides/collection/ga4/reference/events) are bundled with official starters and are fired in different places in the code, depending on what actions should trigger them.
+The [`sendAnalyticsEvent`](/reference/sdk/analytics/sendAnalyticsEvent) function is used to fire analytics events. All [**GA4 Enhanced Commerce events**](https://developers.google.com/analytics/devguides/collection/ga4/reference/events) are bundled with official starters and are fired in different places in the code, depending on what actions should trigger them.
 
 Notice that each store is responsible for firing the desired analytics events and configuring their corresponding properties. No hook or library can do this automatically, and you must set it manually in your code.
 
@@ -39,7 +39,7 @@ Official starters also include **VTEX Intelligent Search (IS)** events. These ev
 
 ## `AnalyticsHandler` component
 
-Even though the Analytics SDK module does not automatically send events to any analytics provider, our official starters do. That's the `AnalyticsHandler`'s (`src/analytics/index.tsx`) role. The `AnalyticsHandler` component calls the [`useAnalyticsHandler`](https://www.faststore.dev/reference/sdk/analytics/useAnalyticsEvent) hook to intercept analytics events. It's in the `AnalyticsHandler` component that events are sent to the appropriate analytics provider, such as GTM, IS, or VTEX Request Capture (RC).
+Even though the Analytics SDK module does not automatically send events to any analytics provider, our official starters do. That's the `AnalyticsHandler`'s (`src/analytics/index.tsx`) role. The `AnalyticsHandler` component calls the [`useAnalyticsHandler`](/reference/sdk/analytics/useAnalyticsEvent) hook to intercept analytics events. It's in the `AnalyticsHandler` component that events are sent to the appropriate analytics provider, such as GTM, IS, or VTEX Request Capture (RC).
 
 To perform these actions, this component has to be included on every page, which means it usually lives alongside context providers at the root of the application (`gatsby.(browser-server).tsx` in Gatsby and `src/pages/_app.tsx` in NextJS).
 

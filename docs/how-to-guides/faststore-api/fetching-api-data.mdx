@@ -1,12 +1,12 @@
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # Fetching API data on the storefront
 
 You can build and customize GraphQL queries to display ecommerce data on your storefront, such as products and shopping cart information. In this guide, you will find the basic concepts and steps to implement this in your FastStore project.
 
 :::caution
-When building your storefront with FastStore, you must not send requests to APIs other than the FastStore API. If you need to access other data not available in the [native FastStore API schema](https://www.faststore.dev/reference/api/queries), you must do this by [extending the GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api). Otherwise, site performance may be compromised and lead to `504` timeout errors.
+When building your storefront with FastStore, you must not send requests to APIs other than the FastStore API. If you need to access other data not available in the [native FastStore API schema](/reference/api/queries), you must do this by [extending the GraphQL schema](/how-to-guides/faststore-api/extending-the-faststore-api). Otherwise, site performance may be compromised and lead to `504` timeout errors.
 :::
 
 ## Before you start
@@ -34,20 +34,19 @@ This also means that you must be mindful of the data brought into your query by 
 
 #### Do not send requests to other APIs
 
-If you need data that is not available on the native [FastStore GraphQL schema](https://www.faststore.dev/reference/api/objects), check the [root object](/reference/api/root-object-fields).
+If you need data that is not available on the native [FastStore GraphQL schema](/reference/api/objects), check the [root object](/reference/api/root-object-fields).
 
-The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) represents the top-level object returned to a query. You can see what data is available in the root object by adding logs or [using a GraphQL IDE](https://www.faststore.dev/how-to-guides/faststore-api/explore-the-faststore-api).
+The [GraphQL root object](https://graphql.org/learn/execution/#root-fields-resolvers) represents the top-level object returned to a query. You can see what data is available in the root object by adding logs or [using a GraphQL IDE](/how-to-guides/faststore-api/explore-the-faststore-api).
 
-If the root object also lacks the information you need, you must [extend the FastStore GraphQL schema](https://www.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) instead of adding other requests to your page.
+If the root object also lacks the information you need, you must [extend the FastStore GraphQL schema](/how-to-guides/faststore-api/extending-the-faststore-api) instead of adding other requests to your page.
 
 #### Avoid custom API Routes
 
-We do not recomend using Next.js [API Routes](https://nextjs.org/docs/api-routes/introduction) other than the ones already built in the [FastStore starters](https://www.faststore.dev/starters).
+We do not recomend using Next.js [API Routes](https://nextjs.org/docs/api-routes/introduction) other than the ones already built in the [FastStore starters](/starters).
 
 If you do use this type of function, you must be mindful to always check which ones are actually running and remove the ones that are not.
 
-To see what API Routes are running in your project, you can run the command `yarn build` at the root of your project and check the log. Then, check the directory `src/pages/api` of your project and remove functions that are not running or are not included in the [starter](https://www.faststore.dev/starters) you used.
-
+To see what API Routes are running in your project, you can run the command `yarn build` at the root of your project and check the log. Then, check the directory `src/pages/api` of your project and remove functions that are not running or are not included in the [starter](/starters) you used.
 
 ## Fetching ecommerce data
 
@@ -61,7 +60,7 @@ Below you can see more details about each step along with code examples.
 
 ### 1. Building a query
 
-First, you need to know what API data you want to use on your page and how to structure a GraphQL query to get it. It is a good idea to check the [FastStore API reference on queries](https://www.faststore.dev/reference/api/queries). You can also [use a GraphQL IDE to build and test queries](https://www.faststore.dev/how-to-guides/faststore-api/explore-the-faststore-api) to make sure it works as expected.
+First, you need to know what API data you want to use on your page and how to structure a GraphQL query to get it. It is a good idea to check the [FastStore API reference on queries](/reference/api/queries). You can also [use a GraphQL IDE to build and test queries](/how-to-guides/faststore-api/explore-the-faststore-api) to make sure it works as expected.
 
 Once you have your query structure, you can pass that as a variable on your code by using the `gql` tag, like in the example below.
 
@@ -342,11 +341,11 @@ function Page({ product }: Props) {
 After completing the steps described above, your code should look like the example below.
 
 :::info
-It is also a good idea to see how data fetching is implemented in pages from [FastStore starters](https://www.faststore.dev/starters), such as:
+It is also a good idea to see how data fetching is implemented in pages from [FastStore starters](/starters), such as:
 
 - [Next.js store product page](https://github.com/vtex-sites/nextjs.store/blob/main/src/pages/%5Bslug%5D/p.tsx)
 - [Gatsby store product page](https://github.com/vtex-sites/gatsby.store/blob/main/src/pages/%5Bslug%5D/p.tsx)
-:::
+  :::
 
 ```javascript
 import { gql } from '@faststore/graphql-utils'
