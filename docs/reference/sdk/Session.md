@@ -43,29 +43,29 @@ Below you can see details of the session data managed by the session SDK module.
 The session SDK module exports a `createSessionStore` function and `Session` type, which you can import like this:
 
 ```ts
-import { createSessionStore } from '@faststore/sdk'
-import type { Session } from '@faststore/sdk'
+import { createSessionStore } from "@faststore/sdk";
+import type { Session } from "@faststore/sdk";
 ```
 
-See in the example below how these are used in the [Next.js store](https://github.com/vtex-sites/nextjs.store) to export other functions that update session information and validate them with the [FastStore API](https://www.faststore.dev/reference/api/faststore-api).
+See in the example below how these are used in the [Next.js store](https://github.com/vtex-sites/nextjs.store) to export other functions that update session information and validate them with the [FastStore API](/reference/api/faststore-api).
 
 ```ts
 //src/sdk/session/index.ts
 
-import { gql } from '@faststore/graphql-utils'
-import { createSessionStore } from '@faststore/sdk'
-import { useMemo } from 'react'
-import type { Session } from '@faststore/sdk'
+import { gql } from "@faststore/graphql-utils";
+import { createSessionStore } from "@faststore/sdk";
+import { useMemo } from "react";
+import type { Session } from "@faststore/sdk";
 
-import storeConfig from 'store.config'
+import storeConfig from "store.config";
 
-import { cartStore } from '../cart'
-import { request } from '../graphql/request'
-import { createValidationStore, useStore } from '../useStore'
+import { cartStore } from "../cart";
+import { request } from "../graphql/request";
+import { createValidationStore, useStore } from "../useStore";
 import type {
   ValidateSessionMutation,
   ValidateSessionMutationVariables,
-} from '../../../@generated/graphql/index'
+} from "../../../@generated/graphql/index";
 
 export const mutation = gql`
   mutation ValidateSession($session: IStoreSession!, $search: String!) {
@@ -86,34 +86,34 @@ export const mutation = gql`
       }
     }
   }
-`
+`;
 
 export const validateSession = async (session: Session) => {
   const data = await request<
     ValidateSessionMutation,
     ValidateSessionMutationVariables
-  >(mutation, { session, search: window.location.search })
+  >(mutation, { session, search: window.location.search });
 
-  return data.validateSession
-}
+  return data.validateSession;
+};
 
-const [validationStore, onValidate] = createValidationStore(validateSession)
+const [validationStore, onValidate] = createValidationStore(validateSession);
 
-const defaultStore = createSessionStore(storeConfig.session, onValidate)
+const defaultStore = createSessionStore(storeConfig.session, onValidate);
 
 export const sessionStore = {
   ...defaultStore,
   set: (val: Session) => {
-    defaultStore.set(val)
+    defaultStore.set(val);
 
     // Trigger cart revalidation when session changes
-    cartStore.set(cartStore.read())
+    cartStore.set(cartStore.read());
   },
-}
+};
 
 export const useSession = () => {
-  const session = useStore(sessionStore)
-  const isValidating = useStore(validationStore)
+  const session = useStore(sessionStore);
+  const isValidating = useStore(validationStore);
 
   return useMemo(
     () => ({
@@ -121,56 +121,56 @@ export const useSession = () => {
       isValidating,
     }),
     [isValidating, session]
-  )
-}
+  );
+};
 ```
 
-Because of this, if you use one of the [Base Store starters](https://www.faststore.dev/starters/base), you have access to `sessionStore`, `useSession` and `validateSession`.
+Because of this, if you use one of the [Base Store starters](/starters/base), you have access to `sessionStore`, `useSession` and `validateSession`.
 
 See the example below to learn more about how these are used in the [Next.js store](https://github.com/vtex-sites/nextjs.store) to update session data according to shopper regionalization input.
 
 ```ts
 //src/components/regionalization/RegionalizationInput/RegionalizationInput.tsx
 
-import { useRef, useState } from 'react'
+import { useRef, useState } from "react";
 
-import InputText from 'src/components/ui/InputText'
-import { sessionStore, useSession, validateSession } from 'src/sdk/session'
+import InputText from "src/components/ui/InputText";
+import { sessionStore, useSession, validateSession } from "src/sdk/session";
 
 interface Props {
-  closeModal: () => void
+  closeModal: () => void;
 }
 
 function RegionInput({ closeModal }: Props) {
-  const inputRef = useRef<HTMLInputElement>(null)
-  const { isValidating, ...session } = useSession()
-  const [errorMessage, setErrorMessage] = useState<string>('')
-  const [input, setInput] = useState<string>('')
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { isValidating, ...session } = useSession();
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [input, setInput] = useState<string>("");
 
   const handleSubmit = async () => {
-    const postalCode = inputRef.current?.value
+    const postalCode = inputRef.current?.value;
 
-    if (typeof postalCode !== 'string') {
-      return
+    if (typeof postalCode !== "string") {
+      return;
     }
 
-    setErrorMessage('')
+    setErrorMessage("");
 
     try {
       const newSession = {
         ...session,
         postalCode,
-      }
+      };
 
-      const validatedSession = await validateSession(newSession)
+      const validatedSession = await validateSession(newSession);
 
-      sessionStore.set(validatedSession ?? newSession)
+      sessionStore.set(validatedSession ?? newSession);
 
-      closeModal()
+      closeModal();
     } catch (error) {
-      setErrorMessage('You entered an invalid Postal Code')
+      setErrorMessage("You entered an invalid Postal Code");
     }
-  }
+  };
 
   return (
     <div className="regionalization-input">
@@ -182,15 +182,15 @@ function RegionInput({ closeModal }: Props) {
         actionable
         value={input}
         onInput={(e) => {
-          errorMessage !== '' && setErrorMessage('')
-          setInput(e.currentTarget.value)
+          errorMessage !== "" && setErrorMessage("");
+          setInput(e.currentTarget.value);
         }}
         onSubmit={handleSubmit}
-        onClear={() => setInput('')}
+        onClear={() => setInput("")}
       />
     </div>
-  )
+  );
 }
 
-export default RegionInput
+export default RegionInput;
 ```
