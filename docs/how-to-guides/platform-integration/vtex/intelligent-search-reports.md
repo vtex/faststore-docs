@@ -177,4 +177,5 @@ The effect of these changes on the Intelligent Search Analytics page can take up
 
 ## Additional resources
 
-[Next.js starter Pull Request - reference](https://github.com/vtex-sites/nextjs.store/pull/373)
+- [Next.js starter Pull Request - reference](https://github.com/vtex-sites/nextjs.store/pull/373)
+- [VTEX Intelligent Search Analytics - reference](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3JcuptYAkwr1GLZEM3IQ2m)
