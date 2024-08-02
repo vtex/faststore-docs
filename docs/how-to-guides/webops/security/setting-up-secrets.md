@@ -42,14 +42,11 @@ Before proceeding any further with this guide, make sure you have:
 ### Step 2 - Setting up your VTEX account to accept secrets
 
 1. Change the current directory to your FastStore’s repository root.
-2. In the root of your project, create an empty file named `{fileName}.env` to store private environment variables.
+2. In the root of your project, create an empty file named `.env` to store private environment variables.
 
    ```sh
-   touch {fileName}.env
+   touch .env
    ```
-   :::caution
-   ️Replace `{fileName}` with the desired name for your environment file, such as `private.env`.
-   :::
 
 3. Now, run the following command to configure your VTEX account and your FastStore project to be able to save Secrets.
 
