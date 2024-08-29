@@ -2,7 +2,7 @@
 
 ### StoreAggregateOffer
 
-Aggregate offer information, for a given SKU that is available to be fulfilled by multiple sellers.
+Aggregate offer information is needed for a given SKU that is available to be fulfilled by multiple sellers.
 
 <table>
 <thead>
@@ -1416,6 +1416,10 @@ Search result suggestions.
 ### StoreSeo
 
 Search Engine Optimization (SEO) tags data.
+
+:::caution 
+This object only returns the `title` and `description` fields due to a [known issue](https://help.vtex.com/known-issues/faststore-v1-dont-return-seo-information-on-graphql-query--4nZnX8sj9J90xtkNpYIgZ4). To retrieve other SEO information, you can extend the Product query by following the [Extending the GraphQL schema](https://v1.faststore.dev/how-to-guides/faststore-api/extending-the-faststore-api) guide.
+:::
 
 <table>
 <thead>
