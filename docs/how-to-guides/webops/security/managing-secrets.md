@@ -45,6 +45,6 @@ To encrypt your secrets, run the following command:
 vtex secrets hide
 ```
 
-That's all! Now you can commit and push your changes to your remote repository.
+Now you can commit and push your changes to your remote repository.
 
 Notice that whenever you need to update your Secrets, you must run `vtex secrets reveal` to first decrypt them. The Secrets file extension will change back to `secrets.revealed.json` and you'll be able to edit it. Once you finish your changes, you must run `vtex secrets hide` again.
