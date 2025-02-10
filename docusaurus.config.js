@@ -37,7 +37,7 @@ module.exports = {
     announcementBar: {
       id: 'new_portal',
       content: 
-      `📢 <span style="color:var(--ifm-color-rebel-pink); background-color:var(--ifm-tag-highlight); padding:0.5em; margin:0.3em; border-radius:5px; font-weight: bold" > FastStore 1.0 is no longer receiving updates. For the FastStore latest version, visit the <a style="color:var(--ifm-link-color)" href="https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore">Developer Portal</a>.</span>`,
+      '📢 <span style="color:var(--ifm-color-rebel-pink); background-color:var(--ifm-tag-highlight); padding:0.5em; margin:0.3em; border-radius:5px; font-weight: bold" > FastStore 1.0 is no longer receiving updates. For the FastStore latest version, visit the <a style="color:var(--ifm-link-color)" href="https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore">Developer Portal</a>.</span>',
       textColor: 'var(--ifm-color-details)',
       backgroundColor: 'var(--ifm-tag-highlight)',
       isCloseable: false,
