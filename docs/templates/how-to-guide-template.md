@@ -17,7 +17,7 @@ Give an overview of the core concepts and information required for this guide. B
 
 > _Specifications are additional properties that can be added to your store's products or SKUs. A specification is used to create site browsing filters and to differentiate SKUs and products within the product page._
 
-{Image or gif of the expected behavior after completing the guide}
+\{Image or gif of the expected behavior after completing the guide}
 
 ---
 

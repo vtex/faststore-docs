@@ -1,7 +1,7 @@
 ---
 id: 3
 description: Define which content of the storefront will be editable via the VTEX Headless CMS.
-sidebar_label: '3. Adding Content Types and Sections to the VTEX Headless CMS'
+sidebar_label: "3. Adding Content Types and Sections to the VTEX Headless CMS"
 pagination_label: Part 3
 ---
 
@@ -39,6 +39,7 @@ values={[
 {label: 'CMS', value: 'CMS'},
 ]}>
 <TabItem value="code">
+
 <div>
 
 ```json title="cms/content-types.json"
@@ -106,10 +107,10 @@ values={[
 
 Notice that, to declare a new Content Type, you must specify at least the following three parameters:
 
-| Key | Description |
-| --- | ------------|
-| `id` | The identification key of a Content Type, written in Camel Case.   |
-| `name` | The name presented at the VTEX Headless CMS app.  |
+| Key                                      | Description                                                                                                                                                                                                                                                              |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `id`                                     | The identification key of a Content Type, written in Camel Case.                                                                                                                                                                                                         |
+| `name`                                   | The name presented at the VTEX Headless CMS app.                                                                                                                                                                                                                         |
 | **(optional)** `configurationSchemaSets` | Creates a new tab on the page of that Content Type with advanced settings. In our example, the **Institutional Page** includes a new tab called SEO with custom SEO settings. Check the [following section](#the-configurationschemasets-property) for more information. |
 
 #### The `configurationSchemaSets` property
@@ -129,8 +130,7 @@ For more information on how to write a `schema`, check the [`JSON Schema Referen
 After editing the `cms/content-types.json` file, remember to save your changes and check them live by accessing the VTEX Admin at **CMS (alpha) > Pages (alpha)**. Click on **Create New** and check the available Content Type options. Click on **Institutional Page** to create a new **Institutional Page** and check the SEO tab.
 
 <details>
-<summary>Try our generic Content Type definition.
-</summary>
+<summary>Try our generic Content Type definition.</summary>
 
 Copy and paste the following code in the `cms/content-types.json` file to try our generic Content Type definitions. Remember to save your changes.
 
@@ -570,8 +570,7 @@ In our example, the **Shelf** Section would be already available for use.
 ![](https://vtexhelp.vtexassets.com/assets/docs/src/cms-new-section___477682d7c0d871cea3540e26eb8df915.png)
 
 <details>
-<summary>Try our generic Section definitions.
-</summary>
+<summary>Try our generic Section definitions.</summary>
 
 Copy and paste the following code in the `cms/sections.json` file to try our generic Section definitions. Remember to save your changes.
 
@@ -858,8 +857,7 @@ After creating our Section schemas and Content Types, we will declare the Transl
 ```
 
 <details>
-<summary>Try our generic Translation Key definition.
-</summary>
+<summary>Try our generic Translation Key definition.</summary>
  
 Copy and paste the following code in the `cms/translation-keys.json` file to try our generic Translation Key definitions. Remember to save your changes.
 

@@ -4,9 +4,9 @@ sidebar_position: 5
 ---
 
 import PropsComponent from "@site/src/components/PropsComponent/PropsComponent";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import GraphQLExplorer from '@site/src/components/GraphQLExplorer/GraphQLExplorer'
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import GraphQLExplorer from "@site/src/components/GraphQLExplorer/GraphQLExplorer";
 
 # search
 
@@ -21,35 +21,31 @@ This query can be used to fetch information about search facets, products and su
 <h3 className="mb-4">Arguments</h3>
 
 <PropsComponent
-      name="first"
-      type="Int"
-      description="	Number of items that should return from the complete result list."
-      required="true"
-    />
+  name="first"
+  type="Int"
+  description="	Number of items that should return from the complete result list."
+  required="true"
+/>
 
 <PropsComponent
-      name="after"
-      type="String"
-      description="Pagination argument, indicating the cursor corresponding to the item after which the results should be fetched."
-    />
+  name="after"
+  type="String"
+  description="Pagination argument, indicating the cursor corresponding to the item after which the results should be fetched."
+/>
 
 <PropsComponent
-      name="sort"
-      type="StoreSort"
-      description="Search result sorting mode, where <code>StoreSort</code> is an Enum with one of the possible values: <code>price_desc, price_asc, orders_desc, name_desc, name_asc, release_desc, discount_desc and score_desc<code/>."
-    />
+  name="sort"
+  type="StoreSort"
+  description="Search result sorting mode, where <code>StoreSort</code> is an Enum with one of the possible values: <code>price_desc, price_asc, orders_desc, name_desc, name_asc, release_desc, discount_desc and score_desc<code/>."
+/>
+
+<PropsComponent name="term" type="String" description="Search term." />
 
 <PropsComponent
-      name="term"
-      type="String"
-      description="Search term."
-    />
-
-<PropsComponent
-      name="selectedFacets"
-      type="IStoreSelectedFacet"
-      description="Array of search facets (<code>IStoreSelectedFacet</code>), each with key and value."
-    />
+  name="selectedFacets"
+  type="IStoreSelectedFacet"
+  description="Array of search facets (<code>IStoreSelectedFacet</code>), each with key and value."
+/>
 
 </div>
 <div>
@@ -73,7 +69,6 @@ query ($first: Int!){
 }
 ```
 
-
 </TabItem>
 
 <TabItem value="response" label="Response">
@@ -81,31 +76,70 @@ query ($first: Int!){
 Below you can see a list of all fields that can be queried with `search`. Click on the links to learn more details about each field.
 
 <ul>
-  <li><a href="/reference/api/objects#storesearchresult"><code>StoreSearchResult</code></a>
+  <li>
+    <a href="/reference/api/objects#storesearchresult">
+      <code>StoreSearchResult</code>
+    </a>
     <ul>
-      <li><code>facets</code>: [<a href="/reference/api/objects/#storefacet">StoreFacet</a>!]!</li>
-      <li><code>StoreSuggestions</code>: <a href="/reference/api/objects/#storesuggestions">StoreSuggestions</a>!</li>
-      <li><a href="/reference/api/objects#storeproductconnection"><code>StoreProductConnection</code></a>
+      <li>
+        <code>facets</code>: [
+        <a href="/reference/api/objects/#storefacet">StoreFacet</a>!]!
+      </li>
+      <li>
+        <code>StoreSuggestions</code>:{" "}
+        <a href="/reference/api/objects/#storesuggestions">StoreSuggestions</a>!
+      </li>
+      <li>
+        <a href="/reference/api/objects#storeproductconnection">
+          <code>StoreProductConnection</code>
+        </a>
         <ul>
-        <li><code>pageInfo</code>: <a href="/reference/api/objects/#storepageinfo">StorePageInfo</a>
-          <ul>
-          <li><code>hasNextPage</code>: boolean!</li>
-          <li><code>hasPreviousPage</code>: boolean!</li>
-          <li><code>startCursor</code>: string!</li>
-          <li><code>endCursor</code>: string!</li>
-          <li><code>totalCount</code>: int!</li>
-          </ul>
-        </li>
-        <li><code>edges</code>: [<a href="/reference/api/objects/#storeproductedge">StoreProductEdge</a>]!
-          <ul>
-          <li><code>node</code>: <a href="/reference/api/objects/#storeproduct">StoreProduct</a>!
+          <li>
+            <code>pageInfo</code>:{" "}
+            <a href="/reference/api/objects/#storepageinfo">StorePageInfo</a>
             <ul>
-            <li>Product information. Check <a href="/reference/api/objects/#storeproduct">StoreProduct</a> to see all possible fields.</li>
+              <li>
+                <code>hasNextPage</code>: boolean!
+              </li>
+              <li>
+                <code>hasPreviousPage</code>: boolean!
+              </li>
+              <li>
+                <code>startCursor</code>: string!
+              </li>
+              <li>
+                <code>endCursor</code>: string!
+              </li>
+              <li>
+                <code>totalCount</code>: int!
+              </li>
             </ul>
           </li>
-          <li><code>cursor</code>: string!</li>
-          </ul>
-        </li>
+          <li>
+            <code>edges</code>: [
+            <a href="/reference/api/objects/#storeproductedge">
+              StoreProductEdge
+            </a>
+            ]!
+            <ul>
+              <li>
+                <code>node</code>:{" "}
+                <a href="/reference/api/objects/#storeproduct">StoreProduct</a>!
+                <ul>
+                  <li>
+                    Product information. Check{" "}
+                    <a href="/reference/api/objects/#storeproduct">
+                      StoreProduct
+                    </a>{" "}
+                    to see all possible fields.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <code>cursor</code>: string!
+              </li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
@@ -118,18 +152,16 @@ Below you can see a list of all fields that can be queried with `search`. Click 
 </div>
 </div>
 
-
-
 ## Example
 
 - Get the keys, labels, label values, and value amounts from the first three facets in the search result from the `wooden` term.
 
 ```graphql
 query {
-  search (first:3, term:"wooden") {
+  search(first: 3, term: "wooden") {
     facets {
-      key,
-      label,
+      key
+      label
       values {
         quantity
       }
@@ -142,20 +174,20 @@ query {
 
 ```graphql
 query {
-  search (first: 10, after: "10", term:"steel") {
+  search(first: 10, after: "10", term: "steel") {
     products {
       pageInfo {
-        hasNextPage,
+        hasNextPage
         totalCount
-      },
+      }
       edges {
         node {
-          name,
-          sku,
+          name
+          sku
           image {
             url
           }
-        },
+        }
         cursor
       }
     }
@@ -167,14 +199,14 @@ query {
 
 ```graphql
 query {
-  search (first:5, sort: discount_desc, term:"table") {
+  search(first: 5, sort: discount_desc, term: "table") {
     suggestions {
       terms {
-        value,
+        value
         count
-      },
+      }
       products {
-        name,
+        name
         sku
       }
     }
@@ -186,47 +218,46 @@ query {
 
 ```graphql
 query {
-  search (first:5, after:"5", term:"wooden", sort:score_desc) {
+  search(first: 5, after: "5", term: "wooden", sort: score_desc) {
     products {
       pageInfo {
-        totalCount,
-        hasNextPage,
+        totalCount
+        hasNextPage
         endCursor
-      },
+      }
       edges {
         node {
-          name,
-          sku,
-          slug,
+          name
+          sku
+          slug
           image {
-            url,
+            url
             alternateName
           }
-        },
+        }
         cursor
       }
-    },
+    }
     suggestions {
       terms {
-        value,
+        value
         count
-      },
+      }
       products {
-        name,
-        slug,
+        name
+        slug
         description
       }
-    },
+    }
     facets {
-      key,
-      label,
+      key
+      label
       values {
-        value,
+        value
         selected
-      },
+      }
       type
     }
   }
 }
 ```
-
