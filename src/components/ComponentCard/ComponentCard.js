@@ -1,13 +1,10 @@
-import React from 'react'
-import Link from '@docusaurus/Link'
-import { useDocById } from '@docusaurus/theme-common'
+import Link from "@docusaurus/Link";
+import { useDocById } from "@docusaurus/plugin-content-docs/client"; // it doesn't exist
+import React from "react";
 
 function CardLayout({ href, title, description, image }) {
   return (
-    <Link
-      href={href}
-      className="hover:no-underline text-text"
-    >
+    <Link href={href} className="hover:no-underline text-text">
       {image && <img src={image} className="!m-0 border rounded" />}
       <div className="pt-3">
         <h3 className="truncate" title={title}>
@@ -20,12 +17,12 @@ function CardLayout({ href, title, description, image }) {
         )}
       </div>
     </Link>
-  )
+  );
 }
 
 export default function ComponentCard({ item }) {
-  const doc = useDocById(item.docId ?? undefined)
-  console.log(item)
+  const doc = useDocById(item.docId ?? undefined);
+  console.log(item);
 
   return (
     <CardLayout
@@ -34,5 +31,5 @@ export default function ComponentCard({ item }) {
       description={doc?.description}
       image={item.customProps?.image}
     />
-  )
+  );
 }

@@ -1,19 +1,15 @@
-import React from 'react'
-import clsx from 'clsx'
-import ErrorBoundary from '@docusaurus/ErrorBoundary'
-import SkipToContent from '@theme/SkipToContent'
-import AnnouncementBar from '@theme/AnnouncementBar'
-import Navbar from '@theme/Navbar'
-import Footer from '@theme/Footer'
-import LayoutProviders from '@theme/LayoutProviders'
-import {
-  PageMetadata,
-  ThemeClassNames,
-  useKeyboardNavigation,
-} from '@docusaurus/theme-common'
-import ErrorPageContent from '@theme/ErrorPageContent'
-import FeedbackButton from '../../components/FeedbackButton/FeedbackButton'
-import './styles.css'
+import ErrorBoundary from "@docusaurus/ErrorBoundary";
+import { PageMetadata, ThemeClassNames } from "@docusaurus/theme-common";
+import ErrorPageContent from "@theme/ErrorPageContent";
+import Footer from "@theme/Footer";
+import LayoutProviders from "@theme/Layout/Provider";
+import Navbar from "@theme/Navbar";
+import SkipToContent from "@theme/SkipToContent";
+import clsx from "clsx";
+import React from "react";
+import FeedbackButton from "../../components/FeedbackButton/FeedbackButton";
+import AnnouncementBar from "../AnnouncementBar";
+import "./styles.css";
 export default function Layout(props) {
   const {
     children,
@@ -22,8 +18,8 @@ export default function Layout(props) {
     // Not really layout-related, but kept for convenience/retro-compatibility
     title,
     description,
-  } = props
-  useKeyboardNavigation()
+  } = props;
+  // useKeyboardNavigation();
   return (
     <LayoutProviders>
       <PageMetadata title={title} description={description} />
@@ -41,5 +37,5 @@ export default function Layout(props) {
 
       {!noFooter && <Footer />}
     </LayoutProviders>
-  )
+  );
 }
