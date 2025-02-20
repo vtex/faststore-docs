@@ -4,8 +4,8 @@ sidebar_position: 2
 ---
 
 import PropsComponent from "@site/src/components/PropsComponent/PropsComponent";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # validateSession
 
@@ -20,45 +20,85 @@ Updates a web session with the specified values. Use this mutation to change loc
 ### Arguments
 
 <PropsComponent
-      name="session"
-      type="IStoreSession!"
-      description="Web session information."
-      required="true"
-    />
+  name="session"
+  type="IStoreSession!"
+  description="Web session information."
+  required="true"
+/>
 
 <PropsComponent
-      name="search"
-      type="String!"
-      description="Search term."
-      required="true"
-    />
+  name="search"
+  type="String!"
+  description="Search term."
+  required="true"
+/>
 
 ### Fields
 
 Below you can see a list of fields that can be returned by the `validateSession` mutation. Click on the links to learn more details about each field.
 
 <ul>
-  <li><code>validateSession</code>: <a href="/reference/api/objects#storesession">StoreSession</a>
-  <ul>
-    <li><code>locale</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-    <li><code>country</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-    <li><code>postalCode</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-    <li><code>channel</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-    <li><code>currency</code>: <a href="/reference/api/objects#storecurrency"><code>StoreCurrency</code></a>!
+  <li>
+    <code>validateSession</code>:{" "}
+    <a href="/reference/api/objects#storesession">StoreSession</a>
     <ul>
-      <li><code>code</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-      <li><code>symbol</code>: <a href="/reference/api/scalars#string">String</a>!</li>
+      <li>
+        <code>locale</code>: <a href="/reference/api/scalars#string">String</a>!
+      </li>
+      <li>
+        <code>country</code>: <a href="/reference/api/scalars#string">String</a>
+        !
+      </li>
+      <li>
+        <code>postalCode</code>:{" "}
+        <a href="/reference/api/scalars#string">String</a>!
+      </li>
+      <li>
+        <code>channel</code>: <a href="/reference/api/scalars#string">String</a>
+        !
+      </li>
+      <li>
+        <code>currency</code>:{" "}
+        <a href="/reference/api/objects#storecurrency">
+          <code>StoreCurrency</code>
+        </a>
+        !
+        <ul>
+          <li>
+            <code>code</code>:{" "}
+            <a href="/reference/api/scalars#string">String</a>!
+          </li>
+          <li>
+            <code>symbol</code>:{" "}
+            <a href="/reference/api/scalars#string">String</a>!
+          </li>
+        </ul>
+      </li>
+      <li>
+        <code>person</code>:{" "}
+        <a href="/reference/api/objects#storeperson">
+          <code>StorePerson</code>
+        </a>
+        !
+        <ul>
+          <li>
+            <code>id</code>: <a href="/reference/api/scalars#string">String</a>!
+          </li>
+          <li>
+            <code>email</code>:{" "}
+            <a href="/reference/api/scalars#string">String</a>!
+          </li>
+          <li>
+            <code>givenName</code>:{" "}
+            <a href="/reference/api/scalars#string">String</a>!
+          </li>
+          <li>
+            <code>familyName</code>:{" "}
+            <a href="/reference/api/scalars#string">String</a>!
+          </li>
+        </ul>
+      </li>
     </ul>
-    </li>
-    <li><code>person</code>: <a href="/reference/api/objects#storeperson"><code>StorePerson</code></a>!
-    <ul>
-      <li><code>id</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-      <li><code>email</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-      <li><code>givenName</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-      <li><code>familyName</code>: <a href="/reference/api/scalars#string">String</a>!</li>
-    </ul>
-    </li>
-  </ul>
   </li>
 </ul>
 
@@ -94,16 +134,15 @@ Validating session with locale, currency, country and the shopper's information,
 
 ```graphql
 mutation validateSession($session: IStoreSession!, $search: String!) {
-  validateSession (session: $session, search: $search)
-  {
-    locale,
-    country,
+  validateSession(session: $session, search: $search) {
+    locale
+    country
     currency {
-      code,
+      code
       symbol
-    },
+    }
     person {
-      email,
+      email
       givenName
     }
   }
@@ -116,19 +155,19 @@ mutation validateSession($session: IStoreSession!, $search: String!) {
 
 ```json
 {
-    "session": {
-      "person": {
-        "email": "hal.jordan@examplemail.com",
-        "id": "123456789abc",
-        "givenName": "Hal",
-        "familyName": "Jordan"
-      },
-      "locale": "EN",
-      "currency": {
-        "code": "USD",
-        "symbol": "$"
-      },
-      "country": "USA"
+  "session": {
+    "person": {
+      "email": "hal.jordan@examplemail.com",
+      "id": "123456789abc",
+      "givenName": "Hal",
+      "familyName": "Jordan"
+    },
+    "locale": "EN",
+    "currency": {
+      "code": "USD",
+      "symbol": "$"
+    },
+    "country": "USA"
   },
   "search": "computer"
 }
@@ -140,20 +179,20 @@ mutation validateSession($session: IStoreSession!, $search: String!) {
 
 ```json
 {
-    data: {
-        "validateSession": {
-            "locale": "EN",
-            "country": "USA",
-            "currency": {
-                "code": "USD",
-                "symbol": "$"
-            },
-            "person": {
-                "email": "hal.jordan@examplemail.com",
-                "givenName": "Hal"
-            }
-        } 
+  "data": {
+    "validateSession": {
+      "locale": "EN",
+      "country": "USA",
+      "currency": {
+        "code": "USD",
+        "symbol": "$"
+      },
+      "person": {
+        "email": "hal.jordan@examplemail.com",
+        "givenName": "Hal"
+      }
     }
+  }
 }
 ```
 
