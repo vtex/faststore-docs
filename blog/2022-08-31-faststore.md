@@ -10,6 +10,8 @@ In this article, we share our vision for the future of analytics on FastStore an
 
 Before we start, it's important to highlight that **this is not a commitment** to any of the following topics, and we have not yet planned when they will be implemented or even if they'll come to be. That being said, we envision an ever-evolving analytics solution for FastStore, and we count on you to build it together with us.
 
+<!--truncate-->
+
 ### Universal Analytics
 
 We want to make it easy to migrate to FastStore, regardless of where you are coming from. To address that, **we intend to support Universal Analytics on our official starters**. We still plan to recommend and enforce Google Analytics 4 whenever possible. Still, we want to give our users and developers the time they need to fully understand and migrate to the new version of Google Analytics.

@@ -6,7 +6,6 @@ sidebar_position: 2
 import PropsComponent from "@site/src/components/PropsComponent/PropsComponent";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import GraphQLExplorer from "@site/src/components/GraphQLExplorer/GraphQLExplorer";
 
 # allProducts
 
@@ -114,20 +113,20 @@ Below you can see a list of all fields that can be queried with `allProducts`. C
 
 Get the names, SKUs, and cursors of the five products after the product associated with the cursor `4`. Also, get the last cursor in the complete list and whether there are more results for the next page.
 
-<GraphQLExplorer
-  query='query {
-  allProducts (first:5, after:"4") {
+```gql
+query {
+  allProducts(first: 5, after: "4") {
     pageInfo {
-      hasNextPage,
+      hasNextPage
       endCursor
-    },
+    }
     edges {
       node {
-        name,
+        name
         sku
-      },
+      }
       cursor
     }
   }
-}'
-/>
+}
+```

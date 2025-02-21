@@ -25,9 +25,9 @@ In this step, you'll install the VTEX Headless CMS app and all its dependencies 
 
 1. Open a new terminal window and log in to your VTEX account.
 
-<code style="padding: 15px; margin-bottom: 20px; display: block;">
-   vtex login &#123;accountName&#125;
-</code>
+```
+   vtex login {accountName}
+```
 
 2. Install the VTEX Headless CMS app and all its dependencies.
 
@@ -61,9 +61,9 @@ In this step, we'll learn how to configure the VTEX Headless CMS app to use that
 
 1. Open the terminal and log in to your VTEX account by running the following command:
 
-<code style="padding: 15px; margin-bottom: 20px; display: block;">
-   vtex login &#123;accountName&#125;
-</code>
+```
+   vtex login {accountName}
+```
 
 :::caution
 Remember to replace the values between curly brackets according to your scenario.
@@ -71,15 +71,15 @@ Remember to replace the values between curly brackets according to your scenario
 
 2. Create a new workspace:
 
-<code style="padding: 15px; margin-bottom: 20px; display: block;">
-   vtex login &#123;workspaceName&#125;
-</code>
+```
+   vtex login {workspaceName}
+```
 
 3. Open the `admin-cms-graphql-rc` Settings in the Admin of the workspace you just created:
 
-<code style="padding: 15px; margin: 20px 0; display: block;">
-   https://&#123;workspaceName&#125;--&#123;accountName&#125;.myvtex.com/admin/apps/vtex.admin-cms-graphql-rc@0.x/setup/
-</code>
+```
+   https://{workspaceName}--{accountName}.myvtex.com/admin/apps/vtex.admin-cms-graphql-rc@0.x/setup/
+```
 
 4. Select **Add More**.
 5. Fill in the **Builder ID** field with `faststore`.

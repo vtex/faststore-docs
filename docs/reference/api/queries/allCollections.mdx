@@ -4,9 +4,8 @@ sidebar_position: 4
 ---
 
 import PropsComponent from "@site/src/components/PropsComponent/PropsComponent";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import GraphQLExplorer from '@site/src/components/GraphQLExplorer/GraphQLExplorer'
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # allCollections
 
@@ -21,17 +20,17 @@ Returns a paginated list of information about the categories and brands from the
 <h3 className="mb-4">Arguments</h3>
 
 <PropsComponent
-      name="first"
-      type="Int"
-      description="	Number of items that should return from the complete result list."
-      required="true"
-    />
+  name="first"
+  type="Int"
+  description="	Number of items that should return from the complete result list."
+  required="true"
+/>
 
 <PropsComponent
-      name="after"
-      type="String"
-      description="Collection pagination argument, indicating the cursor corresponding to the item after which the results should be fetched."
-    />
+  name="after"
+  type="String"
+  description="Collection pagination argument, indicating the cursor corresponding to the item after which the results should be fetched."
+/>
 
 </div>
 <div>
@@ -51,9 +50,9 @@ query($first: Int!) {
 
 <TabItem value="response" label="Response">
 
-Below you can see a list of all fields that can be queried with `allCollections`. 
+Below you can see a list of all fields that can be queried with `allCollections`.
 
-*Click on the links to learn more details about each field.*
+_Click on the links to learn more details about each field._
 
 - [StoreCollectionConnection](/reference/api/objects#storecollectionconnection)
   - `pageInfo`: [StorePageInfo](/reference/api/objects/#storepageinfo)
@@ -76,22 +75,23 @@ Below you can see a list of all fields that can be queried with `allCollections`
 
 Get the type, slug, SEO description, and cursor of the five collections after the collection with the cursor `4`. Also, get the total amount of collections and the cursor corresponding to the list's last collection.
 
-<GraphQLExplorer query='query {
-  allCollections (first:5, after:"4") {
-      pageInfo {
-        endCursor,
-        totalCount
-      },
-      edges {
-        node {
-          type,
-          slug,
-          seo {
-            description
-          }
-        },
-        cursor
+```gql
+query {
+  allCollections(first: 5, after: "4") {
+    pageInfo {
+      endCursor
+      totalCount
+    }
+    edges {
+      node {
+        type
+        slug
+        seo {
+          description
+        }
       }
+      cursor
     }
   }
-}'/>
+}
+```

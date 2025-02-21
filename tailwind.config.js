@@ -2,8 +2,14 @@ function infima(variable) {
   return `var(${variable})`
 }
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.html', './src/**/*.js', './src/**/*.tsx'],
+  corePlugins: {
+    preflight: false,
+    container: false,
+  },
+  darkMode: ["class", '[data-theme="dark"]'],
+  content: ["./src/**/*.{js,jsx,tsx,html}"],
   theme: {
     extend: {
       fontFamily: {
@@ -31,4 +37,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

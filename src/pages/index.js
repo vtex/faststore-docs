@@ -1,8 +1,9 @@
-import React from 'react'
-import Layout from '@theme/Layout'
-import Hero from '@site/src/components/Hero/Hero'
-import PlaygroundPreview from '@site/src/components/Hero/PlaygroundPreview'
-import Link from '@docusaurus/Link'
+import Layout from "@theme/Layout";
+import Hero from "../components/Hero/Hero";
+import Link from "@docusaurus/Link";
+import UIImage from "../../static/img/ui-components.png"
+
+import styles from "./styles.module.css";
 
 function CheckIcon() {
   return (
@@ -15,51 +16,36 @@ function CheckIcon() {
     >
       <path d="M14 0C6.3 0 0 6.3 0 14C0 21.7 6.3 28 14 28C21.7 28 28 21.7 28 14C28 6.3 21.7 0 14 0ZM12.25 19.95L6.3 14L8.75 11.55L12.25 15.05L19.25 8.05L21.7 10.5L12.25 19.95Z" />
     </svg>
-  )
+  );
 }
 
-function Home() {
+export default function Home() {
   return (
     <Layout title="FastStore Documentation">
-      <main>
+      <main className={styles.main}>
         <Hero />
-        <div className="mx-auto px-4 w-full lg:max-w-[1170px]">
-          <div className="grid lg:grid-cols-3 lg:gap-24 lg:my-6 my-14 gap-10">
+        <div className={styles.detailsCard}>
+          <div className={styles.innerContent}>
             <div>
-              <img
-                src="https://vtexhelp.vtexassets.com/assets/docs/src/rocket___425b51e066a4b8056c14509077fbb307.png"
-                className="w-9"
-              />
-              <h3 className="my-4 font-VTEXRegular text-base lg:text-xl leading-8">
-                Start fast with Starters optimized for performance
-              </h3>
-              <p className="leading-7 text-[16px]">
+              <img src="https://vtexhelp.vtexassets.com/assets/docs/src/rocket___425b51e066a4b8056c14509077fbb307.png" />
+              <h3>Start fast with Starters optimized for performance</h3>
+              <p>
                 Quickly get your next FastStore website up and running with
                 Starters optimized for performance.
               </p>
             </div>
             <div>
-              <img
-                src="https://vtexhelp.vtexassets.com/assets/docs/src/code___701a3a9cf0b330050cdc8c6c6ede0154.png"
-                className="w-9"
-              />
-              <h3 className="my-4 font-VTEXRegular text-lg lg:text-xl leading-8">
-                Build fast with familiar technologies
-              </h3>
-              <p className="leading-7 text-[16px]">
+              <img src="https://vtexhelp.vtexassets.com/assets/docs/src/code___701a3a9cf0b330050cdc8c6c6ede0154.png" />
+              <h3>Build fast with familiar technologies</h3>
+              <p>
                 Use your preferred tech stack and explore your creativity to
                 build unique digital commerce storefronts.
               </p>
             </div>
             <div>
-              <img
-                src="https://vtexhelp.vtexassets.com/assets/docs/src/data-icon___7fd96a00b6b64a90fcc756a144ea061e.png"
-                className="w-9"
-              />
-              <h3 className="my-4 font-VTEXRegular text-lg lg:text-xl leading-8">
-                Stay fast with Jamstack and Git workflows
-              </h3>
-              <p className="leading-7 text-[16px]">
+              <img src="https://vtexhelp.vtexassets.com/assets/docs/src/data-icon___7fd96a00b6b64a90fcc756a144ea061e.png" />
+              <h3>Stay fast with Jamstack and Git workflows</h3>
+              <p>
                 Leverage the power of Jamstack to make data-driven decisions
                 around performance and code quality.
               </p>
@@ -67,7 +53,7 @@ function Home() {
           </div>
         </div>
         <hr />
-        <div className="mx-auto px-4 w-full lg:max-w-[1170px] my-24">
+        <div className={styles.innerContent}>
           <div className="grid auto-cols-fr lg:grid-flow-col">
             <div className="my-auto lg:mr-5">
               <h2 className="text-4xl font-VTEXRegular text-fontSecondary mb-8 leading-snug">
@@ -91,12 +77,11 @@ function Home() {
                 EXPLORE OUR COMPONENTS
               </Link>
             </div>
-
-            <PlaygroundPreview />
+            <img src={UIImage} />
           </div>
         </div>
 
-        <div className="mx-auto px-4 w-full my-16 lg:max-w-[1170px]">
+        <div className={styles.innerContent}>
           <div className="grid gap-20 auto-cols-fr lg:grid-flow-col">
             <div>
               <img src="https://vtexhelp.vtexassets.com/assets/docs/src/apis___2c8418648187280cc370ef3c38d3c8f1.png" />
@@ -130,7 +115,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="mx-auto px-4 w-full lg:max-w-[1170px] my-16">
+        <div className={styles.innerContent}>
           <div className="grid gap-20 auto-cols-fr lg:grid-flow-col">
             <div className="my-auto">
               <h2 className="text-4xl font-VTEXTrust text-fontSecondary leading-snug">
@@ -163,7 +148,7 @@ function Home() {
         </div>
 
         <div className="bg-[#ffe0ef]">
-          <div className="mx-auto p-4 py-16 w-full lg:max-w-[1170px] lg:py-20">
+          <div className={styles.innerContent}>
             <div className="lg:flex lg:justify-between mb-5">
               <div className="lg:w-2/5 lg:pr-8">
                 <h2 className="text-2xl font-VTEXRegular text-seriousBlack leading-relaxed mb-0">
@@ -201,9 +186,9 @@ function Home() {
           </div>
         </div>
 
-        <div className="bg-rebelPink">
-          <div className="mx-auto px-4 w-full lg:max-w-[1170px] pt-24 pb-20">
-            <h2 className="text-5xl text-white font-VTEXTrust leading-tight lg:mr-30 mb-5">
+        <div className={styles.bottomBanner}>
+          <div className={styles.innerContent}>
+            <h2>
               Go live with the full VTEX solution for building lightning-fast
               shopping experiences.
             </h2>
@@ -211,7 +196,5 @@ function Home() {
         </div>
       </main>
     </Layout>
-  )
+  );
 }
-
-export default Home

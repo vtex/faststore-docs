@@ -14,39 +14,33 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@apollo/explorer": "^0.5.2",
-    "@docusaurus/core": "3.0.0",
-    "@docusaurus/preset-classic": "3.0.0",
-    "@docusaurus/remark-plugin-npm2yarn": "2.0.0-beta.20",
-    "@docusaurus/theme-live-codeblock": "3.0.0",
-    "@faststore/styles": "^2.0.3-alpha.0",
-    "@faststore/ui": "^2.0.3-alpha.0",
+    "@apollo/explorer": "^3.7.1",
+    "@docusaurus/core": "3.7.0",
+    "@docusaurus/preset-classic": "3.7.0",
+    "@docusaurus/theme-live-codeblock": "^3.7.0",
+    "@mdx-js/react": "^3.0.0",
+    "@tailwindcss/postcss": "^4.0.7",
+    "@faststore/styles": "2.0.3-alpha.0",
+    "@faststore/ui": "2.0.3-alpha.0",
+    "clsx": "^2.0.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@mdx-js/react": "^1.6.21",
-    "@svgr/webpack": "^5.5.0",
-    "babel-loader": "^8.2.2",
-    "clsx": "^1.1.1",
-    "docusaurus-plugin-image-zoom": "^0.0.2",
-    "docusaurus-plugin-react-docgen-typescript": "^0.1.0",
-    "docusaurus-tailwindcss-loader": "file:plugins/docusaurus-tailwindcss-loader",
-    "file-loader": "^6.2.0",
-    "match-sorter": "^6.3.1",
-    "postcss": "^8.4.8",
+    "graphql": "^16.10.0",
+    "match-sorter": "^8.0.0",
+    "postcss": "^8.5.3",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.4.2",
-    "prism-react-renderer": "^2.1.0",
-    "purgecss": "^4.0.3",
-    "react": "^18.2.0",
-    "react-docgen-typescript": "^2.2.1",
-    "react-dom": "^18.2.0",
-    "react-ga4": "^1.4.1",
-    "react-icons": "^4.2.0",
-    "react-spring": "^9.2.4",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-live": "^4.1.8",
     "react-table": "^7.8.0",
-    "redocusaurus": "^0.9.0",
-    "tailwindcss": "^3.0.23",
-    "tinytime": "^0.2.6",
-    "url-loader": "^4.1.1"
+    "tailwindcss": "3",
+    "tinytime": "^0.2.6"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.7.0",
+    "@docusaurus/types": "3.7.0",
+    "autoprefixer": "^10.4.20"
   },
   "browserslist": {
     "production": [
@@ -55,20 +49,12 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
     ]
-  },
-  "devDependencies": {
-    "typescript": "~5.2.2"
   },
   "engines": {
     "node": ">=18.0"
-  },
-  "scripts": {
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider && docusaurus start",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && docusaurus build",
-    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && docusaurus serve"
   }
 }

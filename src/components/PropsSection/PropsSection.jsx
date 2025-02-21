@@ -1,10 +1,11 @@
 import React from 'react'
-import { useDynamicImport } from 'docusaurus-plugin-react-docgen-typescript/pkg/dist-src/hooks/useDynamicImport'
+//import { useDynamicImport } from 'docusaurus-plugin-react-docgen-typescript/pkg/dist-src/hooks/useDynamicImport'
 
 import PropsComponent from '../PropsComponent/PropsComponent'
 
 const PropsSection = ({ name }) => {
-  const props = useDynamicImport(name)
+  //const props = useDynamicImport(name)
+  const props = "Button"
 
   if (!props) {
     return null

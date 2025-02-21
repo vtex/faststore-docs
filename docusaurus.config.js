@@ -1,232 +1,185 @@
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+// @ts-check
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
+
+import { themes as prismThemes } from "prism-react-renderer";
+import tailwindPlugin from "./plugins/tailwind-config.cjs"; // add this
+
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: "FastStore",
   tagline: "Documentation Portal",
-  url: "https://faststore.dev",
-  baseUrl: "/",
-  onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  // Set the production url of your site here
+  url: "https://v1.faststore.dev",
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: "/",
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
   organizationName: "vtex", // Usually your GitHub org/user name.
   projectName: "faststore", // Usually your repo name.
-  themes: ["@docusaurus/theme-live-codeblock"],
-  stylesheets: ["https://use.fontawesome.com/releases/v5.15.4/css/all.css"],
-  customFields: {
-    events: require("./static/data/releases"),
-    updatesData: require("./static/data/doc-update"),
-    starters: require("./static/data/starters"),
-  },
-  scripts: ["/scripts/openReplay.js"],
-  themeConfig: {
-    image: "img/faststore_thumbnail.png",
-    zoom: {
-      selector: ".markdown :not(.notClickable)",
-      config: {
-        // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
-        background: {
-          light: "rgb(255, 255, 255)",
-          dark: "rgb(50, 50, 50)",
-        },
-      },
-    },
-    colorMode: {
-      defaultMode: "light",
-      disableSwitch: false,
-      respectPrefersColorScheme: false,
-    },
-    announcementBar: {
-      id: "new_portal",
-      content:
-        '📢 <span style="color:var(--ifm-color-rebel-pink); background-color:var(--ifm-tag-highlight); padding:0.5em; margin:0.3em; border-radius:5px; font-weight: bold" > FastStore 1.0 is no longer receiving updates. For the FastStore latest version, visit the <a style="color:var(--ifm-link-color)" href="https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore">Developer Portal</a>.</span>',
-      textColor: "var(--ifm-color-details)",
-      backgroundColor: "var(--ifm-tag-highlight)",
-      isCloseable: false,
-    },
-    navbar: {
-      title: "FastStore",
-      logo: {
-        alt: "VTEX",
-        src: "img/logo.svg",
-      },
-      items: [
-        {
-          href: "/docs",
-          label: "Documentation",
-          position: "left",
-        },
-        {
-          href: "/faq",
-          label: "FAQ",
-          position: "right",
-          target: "_self",
-          className: "FAQbar",
-        },
-        {
-          label: "Release Notes",
-          to: "releases",
-          position: "right",
-        },
-        {
-          type: "dropdown",
-          label: "More",
-          position: "right",
-          items: [
-            {
-              href: "/starters",
-              label: "Starters",
-              target: "_self",
-            },
-            {
-              href: "https://community.vtex.com/",
-              label: "Community",
-            },
-          ],
-        },
-        {
-          href: "https://github.com/vtex/faststore",
-          position: "right",
-          className: "header-github-link",
-          "aria-label": "GitHub repository",
-        },
-      ],
-    },
-    algolia: {
-      apiKey: "b569ca818413cccb8e41edbcb1dd5161",
-      indexName: "devportal",
-      contextualSearch: true,
-      appId: "OAXP53H7GY",
-    },
-    footer: {
-      logo: {
-        alt: "VTEX Logo",
-        src: "img/white-vtex.svg",
-        href: "https://vtex.com",
-      },
-      links: [
-        {
-          title: "Documentation",
-          items: [
-            {
-              label: "Quickstart",
-              to: "quickstart",
-            },
-            {
-              label: "References",
-              to: "/reference",
-            },
-            {
-              label: "Concepts",
-              to: "/conceptual-guides",
-            },
-            {
-              label: "Tutorials",
-              to: "/tutorials/gatsby-overview",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Starters",
-              to: "/starters",
-            },
-            {
-              label: "Frequently asked questions",
-              to: "/faq",
-            },
-            {
-              label: "Release Notes",
-              to: "/releases",
-            },
-            {
-              label: "VTEX Community",
-              href: "https://community.vtex.com/",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/vtex/faststore",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} FastStore Docs, Inc. Built with Docusaurus.`,
-    },
-    prism: {
-      theme: require("prism-react-renderer").themes.nightOwlLight,
-      darkTheme: require("prism-react-renderer").themes.dracula,
-    },
+
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
+  plugins: [ tailwindPlugin ],
+  themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
-      "@docusaurus/preset-classic",
-      {
-        gtag: {
-          trackingID: "G-MWFMZBZPHF",
-          anonymizeIP: true,
-        },
-        googleAnalytics: {
-          trackingID: "UA-225353622-2",
-          anonymizeIP: true,
-        },
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
-          remarkPlugins: [
-            [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
-          ],
-          sidebarPath: require.resolve("./sidebars.js"),
-          routeBasePath: "/",
+          sidebarPath: "./sidebars.js",
+          routeBasePath: '/',
           // Please change this to your repo.
-          editUrl: "https://github.com/vtex/faststore/edit/main/apps/docs",
+          // Remove this to remove the "edit this page" links.
+          editUrl: "https://github.com/vtex/faststore-docs/edit/main/docs",
         },
         blog: {
-          routeBasePath: "releases",
+          routeBasePath: '/releases',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'Last releases',
           showReadingTime: true,
-          blogSidebarTitle: "All releases",
-          blogSidebarCount: "ALL",
-          blogTitle: "Release Notes",
+          feedOptions: {
+            type: ["rss", "atom"],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl: "https://github.com/vtex/faststore-docs/edit/main/docs",
+          // Useful options to enforce blogging best practices
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
         },
-      },
+      }),
     ],
-    // [
-    //   'redocusaurus',
-    //   {
-    //     specs: [
-    //       {
-    //         spec: 'docs/openapi/headlesscms.yaml',
-    //         routePath: '/vtex-headless-cms-api',
-    //       },
-    //     ],
-    //   },
-    // ],
   ],
-  plugins: [
-    "docusaurus-tailwindcss-loader",
-    require.resolve("docusaurus-plugin-image-zoom"),
-    [
-      "docusaurus-plugin-react-docgen-typescript",
-      {
-        // pass in a single string or an array of strings
-        src: [
-          "../../packages/ui/src/**/*.tsx",
-          "!../../packages/ui/src/**/*.test.*",
-          "!../../packages/ui/src/**/*.stories.*",
-        ],
-        parserOptions: {
-          // pass parserOptions to react-docgen-typescript
-          // here is a good starting point which filters all .tsx files
-          propFilter: (prop, component) => {
-            if (prop.declarations[0]) {
-              return prop.declarations[0].fileName.endsWith(".tsx");
-            }
 
-            return false;
-          },
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      // Replace with your project's social card
+      image: "img/logo.svg",
+      navbar: {
+        title: "FastStore",
+        logo: {
+          alt: "VTEX",
+          src: "img/logo.svg",
         },
+        items: [
+          {
+            href: "/docs",
+            label: "Documentation",
+            position: "left",
+          },
+          {
+            href: "/faq",
+            label: "FAQ",
+            position: "right",
+            target: "_self",
+            className: "FAQbar",
+          },
+          {
+            label: "Release Notes",
+            to: "releases",
+            position: "right",
+          },
+          {
+            href: "https://github.com/vtex/faststore",
+            position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
+          },
+        ],
       },
-    ],
-  ],
+      footer: {
+        logo: {
+          alt: "VTEX Logo",
+          src: "img/white-vtex.svg",
+          href: "https://vtex.com",
+        },
+        links: [
+          {
+            title: "Documentation",
+            items: [
+              {
+                label: "Quickstart",
+                to: "quickstart",
+              },
+              {
+                label: "References",
+                to: "/reference",
+              },
+              {
+                label: "Concepts",
+                to: "/conceptual-guides",
+              },
+              {
+                label: "Tutorials",
+                to: "/tutorials/gatsby-overview",
+              },
+            ],
+          },
+          {
+            title: "More",
+            items: [
+              {
+                label: "Starters",
+                to: "/starters",
+              },
+              {
+                label: "Frequently asked questions",
+                to: "/faq",
+              },
+              {
+                label: "Release Notes",
+                to: "/releases",
+              },
+              {
+                label: "VTEX Community",
+                href: "https://community.vtex.com/",
+              },
+              {
+                label: "GitHub",
+                href: "https://github.com/vtex/faststore",
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} FastStore Docs, Inc. Built with Docusaurus.`,
+      },
+      announcementBar: {
+        id: 'new_portal',
+        content: 
+        '📢 FastStore 1.0 is no longer receiving updates. For the FastStore latest version, visit the <a style="color:var(--ifm-link-color)" href="https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore">Developer Portal</a>.',
+        textColor: 'var(--ifm-color-details)',
+        backgroundColor: 'var(--ifm-tag-highlight)',
+        isCloseable: false,
+      },
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+      },
+    }),
 };
+
+export default config;

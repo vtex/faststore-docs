@@ -8,6 +8,8 @@ hide_table_of_contents: false
 
 We updated our infrastructure to allow you to use site generators that support **server-side rendering** (SSR), such as [Next.js](https://nextjs.org/) and [Gatsby 4](https://www.gatsbyjs.com/gatsby-4/).
 
+<!--truncate-->
+
 ## What has changed?
 
 Before, there were only two ways to render a FastStore website: either via client-side rendering (CSR) or static site generation (SSG). Now, you can also use server-side rendering.

@@ -1,12 +1,10 @@
 import React from 'react'
-import Playground from '@site/src/components/PlaygroundShow'
-import ReactLiveScope from '@site/src/theme/ReactLiveScope'
+import Playground from '../PlaygroundShow'
 
 function PlaygroundPreview() {
   return (
     <Playground
       jsx
-      scope={ReactLiveScope}
       live
     >
       {`<ProductCard>
