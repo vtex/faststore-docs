@@ -36,7 +36,30 @@ const config = {
     locales: ["en"],
   },
 
-  plugins: [ tailwindPlugin ],
+  plugins: [ tailwindPlugin,
+    [
+      'docusaurus-plugin-react-docgen-typescript',
+      {
+        // pass in a single string or an array of strings
+        src: [
+          './node_modules/@faststore/ui/src/**/*.tsx',
+          './node_modules/@faststore/ui/src/**/*.test.*',
+          './node_modules/@faststore/ui/src/**/*.stories.*',
+        ],
+        parserOptions: {
+          // pass parserOptions to react-docgen-typescript
+          // here is a good starting point which filters all .tsx files
+          propFilter: (prop, component) => {
+            if (prop.declarations[0]) {
+              return prop.declarations[0].fileName.endsWith('.tsx')
+            }
+
+            return false
+          },
+        },
+      },
+    ],
+   ],
   themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
