@@ -1,3 +1,15 @@
 {
-  "cleanUrls": true
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://developers.vtex.com/docs/guides/faststore",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "faststore.dev"
+        }
+      ]
+    }
+  ]
 }
