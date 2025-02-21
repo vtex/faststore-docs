@@ -2,10 +2,10 @@
 hide_table_of_contents: true
 sidebar_position: 3
 ---
+
 import PropsComponent from "@site/src/components/PropsComponent/PropsComponent";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import GraphQLExplorer from '@site/src/components/GraphQLExplorer/GraphQLExplorer'
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # collection
 
@@ -17,12 +17,13 @@ Returns the details of a product based on the specified locator.
   <div>
     <h3 className="mb-4">Arguments</h3>
 
-  <PropsComponent
-      name="slug"
-      type="String"
-      description="Slug of the collection you want to query."
-      required="true"
-    />
+{" "}
+<PropsComponent
+  name="slug"
+  type="String"
+  description="Slug of the collection you want to query."
+  required="true"
+/>
 
 </div>
 <div>
@@ -49,23 +50,24 @@ The `collection` query returns a `StoreCollection`. To learn more about each fie
 </div>
 </div>
 
-
 ## Example
 
 Get the ID, type, SEO title and selected facets - with key and value - of the collection with slug `office`.
 
-<GraphQLExplorer query='query {
-  collection (slug:"office") {
-    id,
-    type,
+```gql
+query {
+  collection(slug: "office") {
+    id
+    type
     seo {
       title
     }
     meta {
       selectedFacets {
-        key,
+        key
         value
       }
     }
   }
-}'/>
+}
+```

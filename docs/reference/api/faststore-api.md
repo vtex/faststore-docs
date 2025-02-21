@@ -3,7 +3,6 @@ description: Get to know the FastStore API, an interface between your ecommerce 
 pagination_prev: null
 ---
 
-import GraphQLExplorer from '@site/src/components/GraphQLExplorer/GraphQLExplorer'
 
 # FastStore API
 
@@ -47,22 +46,6 @@ The FastStore API types and resolvers use a clean architecture to tackle specifi
 1. Develop an ecommerce website with Next.js or Gatsby.
 2. Create an Apollo Server instance on Heroku.
 3. Run the executable schema in a function on Next.js.
-
-## Playground
-
-You can use the GraphQL playground below to test and explore the FastStore API.
-
-<GraphQLExplorer query="query {
-          allProducts(first: 10) {
-            edges {
-              node {
-                name
-              }
-            }
-          }
-        }"/>
-
-You can also install the `@faststore/api` dependency in your project to start exploring the data layer by running a local server. Learn more in the [Get started guide](/reference/api/get-started).
 
 ## Going beyond
 

@@ -4,9 +4,8 @@ sidebar_position: 1
 ---
 
 import PropsComponent from "@site/src/components/PropsComponent/PropsComponent";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import GraphQLExplorer from '@site/src/components/GraphQLExplorer/GraphQLExplorer'
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # product
 
@@ -21,24 +20,24 @@ Returns the details of a product based on the specified locator.
 <h3 className="mb-4">Arguments</h3>
 
 <PropsComponent
-      name="locator"
-      type="IStoreSelectedFacet"
-      description="An array of selected search facets."
-      required="true"
+  name="locator"
+  type="IStoreSelectedFacet"
+  description="An array of selected search facets."
+  required="true"
 />
 
 <PropsComponent
-      name="key"
-      type="String"
-      description="<code>IStoreSelectedFacet</code> property. To query information of a product by its SKU ID, use <code>key:'id'</code>."
-      required="true"
+  name="key"
+  type="String"
+  description="<code>IStoreSelectedFacet</code> property. To query information of a product by its SKU ID, use <code>key:'id'</code>."
+  required="true"
 />
 
 <PropsComponent
-      name="value"
-      type="String"
-      description="<code>IStoreSelectedFacet</code> property. To query information of a product by its SKU ID, use <code>value:'{sku}'</code>."
-      required="true"
+  name="value"
+  type="String"
+  description="<code>IStoreSelectedFacet</code> property. To query information of a product by its SKU ID, use <code>value:'{sku}'</code>."
+  required="true"
 />
 
 </div>
@@ -70,21 +69,22 @@ The `product` query returns a `StoreProduct`. To learn more about each field tha
 
 </div>
 
-
 ## Example
 
 Get the name, description, brand, image URL, and image alternate name of the product with the `97730863` SKU.
 
-<GraphQLExplorer query='query {
-  product (locator:[{key:"id", value:"97730863"}]) {
-    name,
-    description,
+```gql
+query {
+  product(locator: [{ key: "id", value: "97730863" }]) {
+    name
+    description
     brand {
       name
-    },
-    image{
-      url,
+    }
+    image {
+      url
       alternateName
     }
   }
-}'/>
+}
+```

@@ -1,13 +1,13 @@
-import React from 'react'
-import { useDynamicImport } from 'docusaurus-plugin-react-docgen-typescript/pkg/dist-src/hooks/useDynamicImport'
+import React from "react";
+import { useDynamicImport } from "docusaurus-plugin-react-docgen-typescript/useDynamicImport";
 
-import PropsComponent from '../PropsComponent/PropsComponent'
+import PropsComponent from "../PropsComponent/PropsComponent";
 
 const PropsSection = ({ name }) => {
-  const props = useDynamicImport(name)
+  const props = useDynamicImport(name);
 
   if (!props) {
-    return null
+    return null;
   }
 
   return Object.keys(props).map((key) => (
@@ -19,7 +19,7 @@ const PropsSection = ({ name }) => {
       description={props[key].description}
       required={props[key].required}
     />
-  ))
-}
+  ));
+};
 
-export default PropsSection
+export default PropsSection;

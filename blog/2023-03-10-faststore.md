@@ -7,6 +7,8 @@ hide_table_of_contents: false
 
 Stores using FastStore have access to an image resizing and cropping service provided by VTEX, that caches the result on edge, which improves storefront performance.
 
+<!--truncate-->
+
 VTEX is simplifying the domain layer of this capability in order to improve it. This means deprecating the current domain in favor of a new one.
 
 ## What is changing?

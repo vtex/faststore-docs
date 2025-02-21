@@ -8,6 +8,8 @@ hide_table_of_contents: false
 
 FastStore API reference documentation is now available. You can check it now via the [GraphiQL](https://github.com/graphql/graphiql) IDE.
 
+<!--truncate-->
+
 ## What has changed?
 
 While working on your FastStore website, you can run your project locally and use **GraphiQL** to explore the API. Now, when you do this you will see that each type, argument, query and mutation has an associated description.

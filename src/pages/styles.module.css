@@ -1,0 +1,26 @@
+.innerContent {
+  @apply mx-auto px-4 w-full lg:max-w-[1170px] my-12;
+}
+.detailsCard > div {
+  @apply grid lg:grid-cols-3 lg:gap-24 lg:my-6 my-14 gap-10;
+}
+
+.detailsCard img {
+  @apply w-9;
+}
+
+.detailsCard h3 {
+  @apply my-4 font-VTEXRegular text-lg lg:text-xl leading-8;
+}
+
+.detailsCard p {
+  @apply leading-7 text-[16px];
+}
+
+.bottomBanner {
+  @apply bg-rebelPink py-16;
+}
+
+.bottomBanner h2 {
+  @apply text-5xl text-white font-VTEXTrust leading-tight lg:mr-28 mb-5;
+}
