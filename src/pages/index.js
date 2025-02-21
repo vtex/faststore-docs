@@ -82,11 +82,11 @@ export default function Home() {
         </div>
 
         <div className={styles.innerContent}>
-          <div className="grid gap-20 auto-cols-fr lg:grid-flow-col">
+          <div className="grid gap-20 auto-cols-fr lg:grid-flow-col py-12 border-y">
             <div>
               <img src="https://vtexhelp.vtexassets.com/assets/docs/src/apis___2c8418648187280cc370ef3c38d3c8f1.png" />
             </div>
-            <div className="my-auto">
+            <div>
               <h2 className="text-4xl font-VTEXTrust text-fontSecondary mb-8 leading-snug">
                 Flexible and extensible GraphQL schemas
               </h2>
@@ -147,7 +147,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#ffe0ef]">
+        <div className="bg-[#ffe0ef] py-12">
           <div className={styles.innerContent}>
             <div className="lg:flex lg:justify-between mb-5">
               <div className="lg:w-2/5 lg:pr-8">
