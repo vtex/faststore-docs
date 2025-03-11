@@ -32,7 +32,7 @@ In this step, you'll install the VTEX Headless CMS app and all its dependencies 
 2. Install the VTEX Headless CMS app and all its dependencies.
 
 ```
-vtex install vtex.admin-cms@0.x vtex.admin-cms-graphql-rc@0.x vtex.cms-builder-sf-jamstack@1.x
+vtex install vtex.admin-cms@0.x vtex.cms-builder-sf-jamstack@1.x
 ```
 
 ## (Optional) Configuring the VTEX Headless CMS to test your local definitions
