@@ -50,7 +50,7 @@ If you find any problems while installing the plugin, please refer to our [Troub
 Install the VTEX Headless CMS app and all its dependencies in your VTEX account by running the following command:
 
 ```
-vtex install vtex.admin-cms@1.x vtex.admin-cms-graphql@0.x vtex.admin-cms-graphql-rc@1.x vtex.cms-builder-sf-jamstack@1.x
+vtex install vtex.admin-cms@1.x vtex.admin-cms-graphql-rc@1.x vtex.cms-builder-sf-jamstack@1.x
 ```
 
 Now you can check the VTEX Headless CMS interface by accessing the VTEX Admin and then going to **Storefront > Headless CMS**.
