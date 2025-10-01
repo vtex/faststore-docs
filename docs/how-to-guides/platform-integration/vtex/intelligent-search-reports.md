@@ -35,7 +35,7 @@ You should also consider that:
 
 In the Next JS starters, they are the `ProductGalleryQuery` and `SearchSuggestionsQuery`.
 
-> Not every search query is full-text. You can consider a search query as being full-text if the query variable `term` is not empty. 
+> Not every search query is full-text. You can consider a search query as being full-text if the query variable `term` is not empty.
 
 2. Add the metadata fragment to above one of the queries
 
@@ -133,9 +133,9 @@ export interface IntelligentSearchQueryEvent {
 }
 ```
 
-2. Add `onSucess` callback to search query callers
+2. Add `onSuccess` callback to search query callers
 
-Find out where the queries are being called and add an `onSucess` callback that fires the `intelligent_search_query` event to each of them.
+Find out where the queries are being called and add an `onSuccess` callback that fires the `intelligent_search_query` event to each of them.
 
 These events should include the required data based on the event type added in step 1. For that, you might need to call hooks to gather the necessary information, such as the current `locale`.
 
@@ -165,16 +165,17 @@ useQuery<Query, Variables>(query, localizedVariables, {
 
 ### Step 3 - Send the event to Intelligent Search
 
-Update the `src/sdk/analytics/platform/vtex/search.ts` file to look exactly like [this copy](https://github.com/vtex-sites/nextjs.store/blob/955742acaeba8cce078bae558fa0ceb966eaa2d6/src/sdk/analytics/platform/vtex/search.ts) of that same file.
+Update the `src/sdk/analytics/platform/vtex/search.ts` file to look exactly like [this copy](https://github.com/vtex-sites/nextjs.store/blob/d8f6a82aa161209ecc75550a3a0fa5b94c72e2cf/src/sdk/analytics/platform/vtex/search.ts) of that same file.
 
 This will update the analytics Search handler to deal with the newly created `intelligent_search_query` event.
 
 ## Considerations
 
-The effect of these changes on the Intelligent Search Analytics page can take up to 8 hours. You can check if you have implemented everything correctly by looking for requests to https://sp.vtex.com/event-api/v1 on your browser's Network Tab
+The effect of these changes on the Intelligent Search Analytics page can take up to 8 hours. You can check if you have implemented everything correctly by looking for requests to https://sp.vtex.com/event-api/v1 on your browser's Network Tab.
 
 ---
 
 ## Additional resources
 
-[Next.js starter Pull Request - reference](https://github.com/vtex-sites/nextjs.store/pull/373)
+- [Next.js starter Pull Request - reference](https://github.com/vtex-sites/nextjs.store/pull/373)
+- [VTEX Intelligent Search Analytics - reference](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3JcuptYAkwr1GLZEM3IQ2m)
